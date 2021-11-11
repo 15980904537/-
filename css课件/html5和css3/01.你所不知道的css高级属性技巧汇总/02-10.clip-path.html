@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clip-path路径裁剪</title>
+    <style>
+        /* 圆形circle（半径at圆心坐标） */
+        .circle {
+            width: 100px;
+            height: 100px;
+            background: #0cc;
+            clip-path: circle(50% at 50% 50%);
+            -webkit-clip-path: circle(50% at 50% 50%);
+        }
+
+        /* 椭圆形ellipse（长、短轴半径at圆心坐标） */
+        .ellipse {
+            width: 100px;
+            height: 100px;
+            background: #aaa;
+            clip-path: ellipse(25% 50% at 50% 50%);
+            -webkit-clip-path: ellipse(25% 50% at 50% 50%);
+        }
+
+        /* 内置矩形inset (上右下左的边距round上右下左圆角) */
+        .inset {
+            width: 100px;
+            height: 100px;
+            background: #99f;
+            clip-path: inset(10px 20px 30px 10px round 20px 5px 50px 0);
+            -webkit-clip-path: inset(10px 20px 30px 10px round 20px 5px 50px 0);
+        }
+
+        /* 正三角形 */
+        .triangle {
+            width: 100px;
+            height: 87px;
+            background: #c00;
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+            -webkit-clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+        }
+
+        /* 正方形 */
+        .square {
+            width: 100px;
+            height: 100px;
+            background: #069;
+            clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+            -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+        }
+        /* 选择器  - 伪元素选择器  */
+    </style>
+</head>
+
+<body>
+    <div class="circle"></div>
+    <div class="ellipse"></div>
+    <div class="inset"></div>
+    <div class="triangle"></div>
+    <div class="square"></div>
+</body>
+
+</html>

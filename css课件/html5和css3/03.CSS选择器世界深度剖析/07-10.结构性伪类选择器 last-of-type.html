@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构性伪类选择器 last-of-type</title>
+    <style>
+        /* p标签的最后一个 */
+        .wrapper div:last-of-type{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <p>我是第一个段落</p>
+        <p>我是第二个段落</p>
+        <p>我是第三个段落</p>
+        <div>我是第一个Div元素</div>
+        <div>我是第二个Div元素</div>
+        <div>我是第三个Div元素</div>
+    </div>
+</body>
+
+</html>

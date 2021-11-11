@@ -1,0 +1,16 @@
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+/* 水平居中 - 版心居中 - 块元素 margin:auto */
+.phoneMain{width:1226px;height:614px;overflow:hidden;margin:0 auto 50px}
+.phoneLeft{width:234px;height:614px;float:left;}
+.phoneLeft img{width:100%;display: block;}
+.phoneRight{background-color: #fff;overflow: hidden;}
+.phoneRight li{float:left;width:25%;height:300px;background-color:pink;
+    margin-bottom:14px;
+    border-left:10px solid #fff;
+    box-sizing: border-box;
+}
+
+
+.videoMain{height:300px;}
+.jdMain .jdPic{margin-bottom:14px;display: block;}

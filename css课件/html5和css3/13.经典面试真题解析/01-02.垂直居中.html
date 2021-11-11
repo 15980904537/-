@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        定位: 3种写法
+        flex:justify-content: center;  align-items:center;
+        dispay：table-cell + vertical-align:middle
+        margin+padding
+        */
+        p{height:150px;line-height:150px;background-color: burlywood;}
+        .parent{width: 400px;height: 400px;background: #000;position: relative;}
+        .txt{width: 100px;height: 100px;background: red;
+            /* position: absolute;top:50%;margin-top:-50px; */
+            /* position: absolute;top:50%;transform: translateY(-50%); */
+            /* position: absolute;top:0;bottom:0;margin: auto; */
+        }
+        .parent2{display: flex;align-items:center;width: 400px;height: 400px;background: green;}
+        .txt2{width: 100px;height: 100px;background: blue;margin:5px;}
+    </style>
+</head>
+
+<body>
+  <!-- 
+    垂直居中:
+    1.文字:line-height=height 
+    2.块级: 定位 left:50%
+    3.多个块级: flex - 垂直
+     -->
+     <p>垂直居中</p>
+    <div class="parent">
+        <div class="txt"></div>
+    </div>
+
+    <div class="parent2">
+        <div class="txt2"></div>
+        <div class="txt2"></div>
+        <div class="txt2"></div>
+        <div class="txt2"></div>
+    </div>
+
+    <div class="box">
+        <div class="son"></div>
+    </div>
+</body>
+
+</html>

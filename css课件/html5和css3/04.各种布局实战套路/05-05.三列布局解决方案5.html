@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三列布局解决方案5-grid网格布局</title>
+    <style>
+    *{margin: 0;padding: 0;}
+    #parent{display: grid;grid-template-columns:200px 200px auto;}
+    #left{height:500px;background-color: greenyellow;}
+    #center{height:500px;background-color: green;}
+    #right{height:500px;background-color: blue;}
+  </style>
+  </head>
+
+  <body>
+    <div id="parent">
+      <div id="left"></div>
+      <div id="center"></div>
+      <div id="right"></div>
+    </div>
+  </body>
+
+</html>

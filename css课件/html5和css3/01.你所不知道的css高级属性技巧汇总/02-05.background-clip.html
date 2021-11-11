@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-clip裁剪</title>
+    <style>
+        div {
+            float: left;
+            width: 500px;
+            height: 300px;
+            margin: 20px;
+            border: 20px dashed red;
+            padding: 30px;
+            background: url(images/1.jpg) no-repeat;
+            background-size: cover;
+        }
+        .box1{
+            /* 边框往外进行裁剪 - 背景没变 */
+            background-clip: border-box;
+        }
+        .box2{
+            /* 内容往外进行裁剪 - padding + border */
+            background-clip: content-box;
+        }
+        .box3{
+            /* 内填充往外进行裁剪 - border */
+            background-clip: padding-box;
+        }
+        .box4{
+            font-size:80px;
+            font-weight:bold;
+            /* 裁剪 -  以文字进行裁剪  - 透出后面的背景   -   文字之外的背景 */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color:transparent
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+
+    <div class="box2"></div>
+
+    <div class="box3"></div>
+
+    <div class="box4">珠峰培训珠峰</div>
+</body>
+
+</html>

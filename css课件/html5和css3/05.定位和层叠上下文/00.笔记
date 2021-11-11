@@ -1,0 +1,24 @@
+定位取值:
+static
+relative
+absolute - position - html
+fixed - 窗口 - 
+sticky -  fixed + relative
+
+层叠上下文
+层叠等级/水平
+层叠顺序：
+正值  >  z-index:auto/0  >  inline/inline-block >  浮动  >  块状元素  >  负值 >  层叠上下文 background/border
+
+触发条件:
+1.html
+2.position（非static） +  z-index 不能为auto
+3.CSS3属性:  transform + opacity + filter + display:flex的子元素 (z-index不为0)....
+
+
+固定定位
+-  参照物 - 窗口
+-  父元素 transform+ transform-style.... 参照物 就是这个元素啦
+
+
+

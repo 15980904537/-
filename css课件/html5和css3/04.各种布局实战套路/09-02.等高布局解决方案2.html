@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>等高布局解决方案2-margin+padding</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #parent {
+            overflow: hidden;
+        }
+        
+        #parent>div {
+            float: left;
+        }
+        
+        #left {
+            width: 20%;
+            background-color: gold;
+            padding-bottom: 9999px;
+            margin-bottom: -9999px;
+        }
+        
+        #right {
+            width: 80%;
+            background-color: blue;
+            padding-bottom: 9999px;
+            margin-bottom: -9999px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="left">zhfueng</div>
+        <div id="right">
+            Never underestimate your power to change?Whatever is worth doing is worth doing well.Never underestimate your power to change?Whatever is worth doing is worth doing well.Never underestimate your power to change?Whatever is worth doing is worth doing wellNever
+            underestimate your power to change?Whatever is worth doing is worth doing well.Never underestimate your power to change?Whatever is worth doing is worth doing well.Never underestimate your power to change?Whatever is worth doing is worth doing
+            well.
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>层叠顺序研究</title>
+    <style>
+        /*   层叠顺序  inline  + inline-block  >  浮动  >  块元素   div  盖在 p上   
+        div的背景 把p的背景给覆盖了  
+        但是  
+         */
+        div{
+            float:left;
+            background-color: goldenrod;
+        }
+        p{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+     <div>珠峰培训珠峰培训珠峰培训珠峰111</div>
+     <p>珠峰培训珠峰培训珠峰培训珠峰培222</p>
+    
+</body>
+</html>

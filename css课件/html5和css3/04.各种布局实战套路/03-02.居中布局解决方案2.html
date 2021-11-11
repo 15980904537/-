@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>居中布局解决方案2-position定位</title>
+  <style>
+    /* 100vh = 可视窗口的高度 */
+    *{margin: 0;padding: 0;}
+    #parent{width:800px;height:800px;background-color: greenyellow;position: relative;}
+    #child{width:200px;height:200px;background-color: green;
+    position: absolute;
+    /* left:50%;
+    top:50%; */
+    /* margin:-100px 0 0 -100px; */
+    /* transform: translate(-50%,-50%); */
+
+    left:0;right:0;
+    top:0;bottom:0;
+    margin:auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 定义父级元素 -->
+  <div id="parent">
+    <!-- 定义子级元素 -->
+    <div id="child"></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>steps()</title>
+    <style>
+        /* gif图  腾讯 - pic  base64 */
+        /* 1600 * 180  8个猴子 
+        steps(8,start)
+        steps(8,end)  = steps(8)
+        */
+        .west{
+            width:200px;
+            height: 180px;
+            background:pink url(sprites/west_01_3ca39fe.png) no-repeat;
+            animation: westAnimation .5s steps(8,end) infinite;
+        }
+        /* 运动轨迹 - transform 变化  
+        雪碧图: 原理 background-position: x y;
+        横向雪碧图: -雪碧图的宽度  0;      0  0 第一个   -1600px 0;   最后一个
+        -1400px 0
+        */
+        @keyframes westAnimation{
+            0%{background-position: 0 0;}
+            100%{background-position: -1600px 0;}
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="west"></div>
+</body>
+
+</html>

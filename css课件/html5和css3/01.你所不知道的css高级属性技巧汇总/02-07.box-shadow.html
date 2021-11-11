@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-shadow盒子阴影</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: burlywood;
+            box-shadow: 10px 10px rgba(0,0,0,.5);
+
+            /* 
+            1.水平方向偏离量 - 正值 往右    负值  往左
+            2.垂直方向偏离量 - 正值 往下    负值  往上
+            3.模糊半径 - 值越大  阴影越模糊  （不能负值） 
+            4.扩展半径 -  可以支持负值
+            5.颜色 - rgba(0,0,0,.5)  alpha 透明度  
+            6.inset - 内阴影
+
+
+            .brick-item:hover {
+                    z-index: 2;
+                    -webkit-box-shadow: 0 15px 30px rgba(0,0,0,.1);
+                    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+                    -webkit-transform: translate3d(0,-2px,0);
+                    transform: translate3d(0,-2px,0);
+            }
+             */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1 active"></div>
+
+</body>
+
+</html>

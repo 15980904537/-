@@ -1,0 +1,35 @@
+CSS的分类
+- 基本选择器  *  p  .class  #id
+- 关系选择器  ul li 、 ul>li 、li+li、li~li
+- 伪类选择器  
+   :link :visited :hover :active
+   :focus
+   :checked :enabled :disabled
+   :not :root :empty 
+   :nth-child :first-child :last-child :only-child :nth-last-child
+   :nth-of-type :nth-last-of-type :first-of-type :last-of-type :only-of-type
+- 伪元素
+  ::fist-letter
+  ::first-line
+  ::before
+  ::after
+  ::place-holder
+  ::section
+- 属性选择器  AMCSS  [am - button]
+  css2.1   单词  [attr]   [attr="val"]     [attr~="val"]   [attr|="val"] 
+  css3     字符   [attr^="val"] [attr$="val"]  [attr*="val"] 
+  css4     [attr*="val i"] 
+
+ 选择器的优先级和权值
+ - 0   *  + > ~  |   :not()
+ - 1   标签  伪元素 ...
+ - 10   class 伪类元素
+ - 100  id  
+ - 1000  style=""
+ - 10000 !important     color:red!important;
+
+ 规律:
+ - 相同，后写的会覆盖前面写的   多个样式表  reset.min.css  index.css
+ - 不相同   !important>行内>id >class > 标签 > * > 继承 > 浏览器默认自带
+
+ 面试题:

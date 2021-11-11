@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水平居中布局解决方案3-text-align+inline-block</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #parent {
+            width: 800px;
+            height: 400px;
+            margin: auto;
+            border: 1px solid red;
+            font-size: 0;
+            text-align: center;
+        }
+        
+        .child {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #000;
+            display: inline-block;
+            margin: 0 10px;
+            color: red;
+            font-size: 16px;
+        }
+        /* font-size: 0; 去掉 display: inline-block; 受换行符的影响产生的间距 
+   font-size: 0;  会导致子元素字体没有啦   => 给子元素加一个font-size不为0 即可
+*/
+    </style>
+</head>
+
+<body>
+    <!-- 定义父级元素 后台 2 居中  3  居中  ... -->
+    <div id="parent">
+        <!-- 定义子级元素 -->
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+    </div>
+</body>
+
+</html>

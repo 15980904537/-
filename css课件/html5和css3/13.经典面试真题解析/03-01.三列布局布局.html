@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 左右定宽 中间自适应 
+        方法一:  left（左浮动） + right(右浮动)    width:200px;
+                 center(center和right调换一下html结构)
+        方法二: left + center + right 同时浮动   calc( % - px)         
+        */
+        .left{float:left;width: 200px;height: 400px;background-color: burlywood;}
+        .center{float:left;width:calc(100% - 200px - 200px);overflow:hidden;background-color: green;height: 500px;}
+        .right{float:left;width: 200px;height: 400px;background-color: burlywood;}
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+    </div>
+
+
+</body>
+
+</html>

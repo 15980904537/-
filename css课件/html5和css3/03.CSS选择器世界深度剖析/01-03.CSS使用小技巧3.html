@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS使用小技巧-自定义复选框效果</title>
+    <style>
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input[type="checkbox"] {
+            position: absolute;
+            clip: rect(0, 0, 0, 0);
+        }
+
+        input[type='checkbox']+label {
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="checkbox"]+label::before {
+            box-sizing: border-box;
+            content: "\a0";
+            width: 13px;
+            height: 13px;
+            margin-right: 4px;
+            border-radius: 2px;
+            border: 1px solid #333;
+        }
+
+        /* 选用状态的样式 */
+        input[type="checkbox"]:checked+label::before {
+            background-color: #0075ff;
+            background-image: url("https://s1.ax1x.com/2020/10/11/0cUbi4.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            border: none;
+        }
+
+        /* 禁灰状态的样式 */
+        input[type="checkbox"]:disabled+label {
+            color: #868686;
+            cursor: not-allowed;
+        }
+
+        input[type="checkbox"]:disabled+label::before {
+            border-color: #868686;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="checkbox-container">
+        <input type="checkbox" id="apple">
+        <label for="apple">苹果</label>
+    </div>
+    <div class="checkbox-container">
+        <input type="checkbox" id="banana" disabled>
+        <label for="banana">香蕉</label>
+    </div>
+    <div class="checkbox-container">
+        <input type="checkbox" id="watermelon">
+        <label for="watermelon">西瓜</label>
+    </div>
+</body><!--  -->
+
+</html>

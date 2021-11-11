@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>层次(关系)选择器</title>
+    <style>
+        /* 后代 - 空格  -  儿子 + 孙子 */
+        /* .list ul  li  span{
+            color:green;
+            background-color: pink;
+        } */
+
+
+       /* 子级选择器  >  - 儿子 */
+        /* .list>ul>li>span{
+            color:green;
+            background-color: pink;
+        }  */
+
+        .list01{
+            border:1px solid #000;
+            
+        }
+        .list01 li+li{
+            height:60px;
+            line-height:60px;
+            border-top:1px solid red;
+        }
+
+        /* + 前面不会对样式生效   + 后面的元素对样式生效 */
+        /* p+div{
+            background-color: gold;
+        } */
+        p~div{
+            background-color: gold;
+        }
+        
+
+        /* 
+        关系选择器:  
+        后代:  空格
+        子代:  >
+        相邻兄弟 + 
+        所有兄弟 ~
+        
+         */
+    </style>
+</head>
+
+<body>
+    <div class="list">
+        <ul>
+            <li>
+                <span>1</span>
+                <ul>
+                    <li>
+                        <span>2</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="list01">
+        <li>庭院深深，不知有多深？杨柳依依，飞扬</li>
+        <li>庭院深深，不知有多深？杨柳依依，飞扬</li>
+        <li>庭院深深，不知有多深？杨柳依依，飞扬</li>
+        <li>庭院深深，不知有多深？杨柳依依，飞扬</li>
+    </ul>
+
+    <p>庭院深深，不知有多深？杨柳依依，飞扬起片片烟雾，一重重帘幕不知有多少层。</p>
+    <div>庭院深深，不知有多深</div>
+    <div>庭院深深，不知有多深</div>
+    <div>庭院深深，不知有多深</div>
+    <div>庭院深深，不知有多深</div>
+</body>
+
+</html>

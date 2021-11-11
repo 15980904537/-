@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流动模型(Flow)</title>
+    <style type="text/css">
+    /* div{
+        margin:10px;
+        background-color: brown;
+    }
+    span{
+        float:left;
+        margin:10px;
+        background-color: brown;
+        width: 100px;
+    } */
+
+    .icon{
+        width: 25px;
+        height: 25px;
+        background: url(https://mat1.gtimg.com/pingjs/ext2020/qqindex2018/dist/img/weather/00.svg) no-repeat;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .pic{
+        background: #000;
+    }
+    .pic img{
+        display: block;
+        width: 200px;
+        height: 100px;
+    }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+        display:  inline / block /inline-block
+        
+
+        行内元素/内联元素  display:inline
+        - 不独占一行 左右结构
+        - 设置宽高不起作用  -  需要转化  display:block/inline-block +  float
+        - 受换行符的影响会产生默认的间距 -  父容器 font-size:0 （去间距）
+    
+        块级元素: display:block
+        - 独占一行 上下结构
+        - 设置宽高起作用
+
+        行内块
+        - img input....
+        - 设置宽高起作用
+        - 不独占一行 左右结构
+
+        img
+
+        icon + 文字
+    
+    -->
+    <div>珠峰培训</div>
+    <div>珠峰培训</div>
+
+    <span>珠峰培训</span>
+    <span>珠峰培训</span>
+
+   <!-- 300 + 700 =  1000 -->
+    <div class="main">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
+    <!-- html结构的搭建 -->
+    <div class="weather">
+        <i class="icon"></i>
+        <span class="txt">天气</span>    
+    </div>
+
+
+    <div class="pic">
+        <img src="https://img1.gtimg.com/ninja/2/2020/10/ninja160368515432971.jpg" alt="">
+    </div>
+
+
+</body>
+
+</html>

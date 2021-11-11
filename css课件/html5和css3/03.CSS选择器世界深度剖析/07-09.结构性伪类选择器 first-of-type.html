@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构性伪类选择器 first-of-type</title>
+    <style>
+        .wrapper {
+            width: 500px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            color: #fff;
+        }
+
+        .wrapper>div {
+            background: green;
+        }
+
+        .wrapper>p {
+            background: blue;
+        }
+        
+
+        /* 第一个 div 元素  */
+        .wrapper>p:first-of-type{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>我是一个块元素，我是.wrapper的第一个子元素</div>
+        <p>我是一个段落元素，我是不是.wrapper的第一个子元素，但是他的第一个段落元素</p>
+        <p>我是一个段落元素</p>
+        <div>我是一个块元素</div>
+    </div>
+</body>
+
+</html>

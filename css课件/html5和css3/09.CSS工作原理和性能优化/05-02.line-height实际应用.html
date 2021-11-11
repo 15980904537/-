@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>line-height实际应用</title>
+    <style>
+        /*  - 中线 + 基线  - 合并成一条线  */
+        
+        .box {
+            font-size: 0;
+            line-height: 300px;
+            text-align: center;
+        }
+        
+        .box img {
+            /* x */
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" style="background-color: #ccc">
+        <img src="images/mm1.jpg" alt="" />
+    </div>
+</body>
+
+</html>

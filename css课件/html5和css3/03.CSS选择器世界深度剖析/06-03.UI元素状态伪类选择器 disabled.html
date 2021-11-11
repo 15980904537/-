@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI元素状态伪类选择器-disabled</title>
+    <style>
+        form {
+            margin: 50px;
+        }
+
+        div {
+            margin-bottom: 20px;
+        }
+
+        input {
+            background: #fff;
+            padding: 10px;
+            border: 1px solid orange;
+            border-radius: 3px;
+        }
+
+        input[type="text"]:disabled {
+            background: rgba(0,0,0,.15);
+            border: 1px solid red;
+            color: rgba(0,0,0,.15);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <div>
+            <input type="text" name="name" id="name" placeholder="我是可用输入框" />
+        </div>
+        <div>
+            <input type="text" name="name" id="name" placeholder="我是不可用输入框" disabled />
+        </div>
+    </form>
+</body>
+
+</html>

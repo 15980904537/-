@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS使用小技巧-使用变量currentColor减少重复代码</title>
+    <style>
+        .good {
+            width: 100px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+
+            color: #333;
+            border: 1px solid currentColor;
+            position: relative;
+        }
+        .good::before{
+            content:"";
+            position: absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height: 100%;
+            background: #ccc;
+            /* background: rgba(currentColor,0.1); */
+            z-index:-1
+        }
+
+        .good:hover {
+            /* color: #fff;
+            background: #0069ff;
+            border: 1px solid #0069ff; */
+            color:#0069ff;
+        }
+
+        .good-click {
+            /* color: #fff;
+            background: #0069ff;
+            border: 1px solid #0069ff; */
+            color:#0069ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='good'>请给我点赞</div>
+    <script>
+        const goodBtn = document.querySelector('.good')
+
+        goodBtn.addEventListener('click', () => {
+            if (goodBtn.classList.contains('good-click')) {
+                goodBtn.classList.remove(['good-click'])
+                return
+            }
+            goodBtn.classList.add(['good-click'])
+        })
+    </script>
+</body>
+
+</html>

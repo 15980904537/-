@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>层叠顺序研究 - 左定宽 右自适应的两列布局</title>
+    <style>
+        /* 
+        层叠顺序  浮动元素  >  块状元素 
+        left  浮动元素
+        right 块状元素
+        
+         */
+      .left{width: 200px;height: 600px;background-color: goldenrod;float: left;}
+      .right{height: 800px;background-color: red;}
+    </style>
+</head>
+<body>
+    <!-- 两列布局 -->
+    <div class="parent">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+
+    <!-- 
+        position: auto + 0 + 正值
+        内容  inline+inline-block
+        布局  float + block 
+        position:  负值
+        装饰  background+border
+     -->
+</body>
+</html>

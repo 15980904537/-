@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片默认的下间隙</title>
+    <style>
+        /* 面试题:img默认下间隙解决办法
+        1.display:block  = >   vertical-align:baseline 失效 
+        2.vertical-align:top/bottom/middle（非baseline）
+        3.line-height 足够小 - 图片和父元素贴近
+        4.font-size:0
+        */
+        .pic {font-size: 0;}
+    </style>
+</head>
+
+<body>
+    <div class="pic" style="background-color:#000;color:#fff;text-align: center;">
+        <img src="images/mm1.jpg">
+    </div>
+</body>
+
+</html>

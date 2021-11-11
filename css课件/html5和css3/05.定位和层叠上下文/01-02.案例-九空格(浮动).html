@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        html,
+        body,
+        .main{
+            width: 100%;  
+            height: 100%;
+        }
+        .main .item{
+            float: left;
+            width: 33.33%;
+            height: 33.33%;
+        }
+        .item:nth-child(2n+1){background-color: blueviolet;}
+        .item:nth-child(2n){background-color: green;}
+    </style>
+</head>
+<body>
+    <!-- float -->
+    <div class="main">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

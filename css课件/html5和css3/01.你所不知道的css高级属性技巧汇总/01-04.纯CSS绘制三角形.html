@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纯CSS绘制三角形</title>
+    <style>
+        /* border */
+        
+        .triangle {
+            width: 0;
+            height: 0;
+            border-width: 30px;
+            border-style: solid;
+            border-color: greenyellow green rebeccapurple darkcyan
+        }
+        
+        .triangle1 {
+            width: 0;
+            /* border-width: 30px;
+            border-style: solid; */
+            border: 30px solid;
+            border-color: transparent green transparent transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="triangle"></div>
+    <div class="triangle triangle1"></div>
+</body>
+
+</html>

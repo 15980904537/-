@@ -1,0 +1,20 @@
+水平居中
+- 文字  text-align：center
+- 块元素  margin:上下  左右auto
+- 多个块元素  text-align  +  display:inline-block
+- 定位 +  3种写法   
+  left:50%  +  margin-left:-宽度/2
+  left:50%  + transform:translatex(-50%) 
+  left:0  +  right:0 + margin:auto          
+- flex  
+ justify-content:center
+
+垂直居中
+- 文字  line-height = height  
+- 块元素   定位 3种写法
+  top:50%  +  margin-top:-高度/2
+  top:50%  +  transform:translateY(-50%) 
+  top:0 + bottom:0 + margin:auto
+- 多个块元素
+  flex 
+  align-items:center;

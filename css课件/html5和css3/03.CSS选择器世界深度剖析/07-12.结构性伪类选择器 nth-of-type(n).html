@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构性伪类选择器 nth-of-type(n)</title>
+    <style>
+        /* div  - 偶数 
+        nth-child      warpper 的儿子元素 奇数 => 1，3，5，...  
+        nth-of-type    warpper 的儿子元素(把div选出来 然后再进行排序)  => 1,3,5....
+
+        nth-of-type 相比  nth-child 会过滤掉不符合要求的标签
+
+         */
+    .wrapper div:nth-of-type(2n+1){
+        background-color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 通过“:nth-of-type(2n)”选择器，将容器“div.wrapper”中偶数段数的背景设置为橙色  -->
+    <div class="wrapper">
+        <div>我是一个Div元素</div>
+        <p>我是一个段落元素</p>
+        <div>我是一个Div元素</div>
+        <p>我是一个段落</p>
+        <div>我是一个Div元素</div>
+        <p>我是一个段落</p>
+        <div>我是一个Div元素</div>
+        <p>我是一个段落</p>
+        <div>我是一个Div元素</div>
+        <p>我是一个段落</p>
+        <div>我是一个Div元素</div>
+        <p>我是一个段落</p>
+        <div>我是一个Div元素</div>
+        <p>我是一个段落</p>
+        <div>我是一个Div元素</div>
+        <p>我是一个段落</p>
+    </div>
+</body>
+
+</html>

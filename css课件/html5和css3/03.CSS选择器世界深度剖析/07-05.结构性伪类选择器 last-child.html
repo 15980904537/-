@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构性伪类选择器 last-child</title>
+    <style>
+        .post {
+            padding: 10px;
+            border: 1px solid #ccc;
+            width: 200px;
+            margin: 20px auto;
+        }
+
+        .post p {
+            margin: 0 0 15px 0;
+        }
+        .post p:last-child{
+            margin:0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="post">
+        <p>第一段落</p>
+        <p>第二段落</p>
+        <p>第三段落</p>
+        <p>第四段落</p>
+        <p>第五段落</p>
+    </div>​
+</body>
+
+</html>

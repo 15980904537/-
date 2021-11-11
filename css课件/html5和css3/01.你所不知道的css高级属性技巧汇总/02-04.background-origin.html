@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-origin背景参考原点</title>
+    <style>
+        div {
+            float: left;
+            width: 500px;
+            height: 300px;
+            margin: 20px;
+            border: 20px dashed red;
+            padding: 30px;
+            background: url(images/1.jpg) no-repeat;
+            background-size: cover;
+        }
+        .box1{
+            /* 背景以边框线进行显示  - 原点 */
+            background-origin: border-box;
+        }
+        .box2{
+            /* 背景以内容线进行显示  - 原点 */
+            background-origin: content-box;
+        }
+        .box3{
+            /* 背景以内填充进行显示  - 原点 */
+            background-origin:padding-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+
+    <div class="box2"></div>
+
+    <div class="box3"></div>
+    
+    <div class="box4"></div>
+
+
+
+</body>
+
+</html>

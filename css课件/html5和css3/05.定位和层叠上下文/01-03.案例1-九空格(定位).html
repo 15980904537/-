@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        html,body,.main{width:100%;height: 100%;}
+        .first_line,.two_line,.three_line{width: 100%;height: 33.33%;position: relative;}
+        .one,.two,.three{width:33.33%;height:100%;}
+        .one{position: absolute;top:0;left:0;}
+        .two{position: absolute;top:0;left:33.33%;}
+        .three{position: absolute;top:0;left:66.66%;}
+    </style>
+</head>
+<body>
+    <!-- position -->
+    <div class="main">
+         <!-- 第一行 -->
+         <div class="first_line" style="background-color: red;">
+             <div class="one" style="background-color: palegoldenrod;"></div>
+             <div class="two" style="background-color: hotpink;"></div>
+             <div class="three"  style="background-color: royalblue;"></div>
+         </div>
+
+          <!-- 第二行 -->
+          <div class="two_line" style="background-color: green;">
+            <div class="one" style="background-color: goldenrod;"></div>
+             <div class="two" style="background-color: khaki;"></div>
+             <div class="three"  style="background-color:blue;"></div>
+        </div>
+
+         <!-- 第三行 -->
+         <div class="three_line" style="background-color: purple;">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位同时设置方位情况</title>
+    <style>
+        span {
+            border: 1px solid red;
+            /* width:100%;display:block */
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            width: 100%;
+            height: 80px;
+            background-color: green;
+            position: fixed;
+            top: 0;
+        }
+        
+        main {
+            /* height = 100% - 80 - 80 */
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 80px;
+            bottom: 80px;
+            height: 100%;
+            background-color: greenyellow;
+        }
+        
+        footer {
+            width: 100%;
+            height: 80px;
+            background-color: blue;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 绝对定位和固定定位时，同时设置 left 和 right 等同于隐式地设置宽度  -->
+    <!-- <span>1</span> -->
+
+    <header></header>
+    <main>
+        <div class="left"></div>
+        <div class="right"></div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

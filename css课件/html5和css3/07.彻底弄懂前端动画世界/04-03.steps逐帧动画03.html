@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .son{
+      width: 256px;
+      height: 343px;
+      background: url(sprites/son.png); 
+      animation: sonAnimation 1s steps(6,end) infinite;
+
+      /* animation: sonAnimation 1s steps(5,end) infinite;
+      animation-fill-mode: forwards; */
+    }
+    @keyframes sonAnimation{
+      0%{background-position: 0 0;}
+      100%{background-position: 0 -2060px;}
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="son"></div>
+</body>
+
+</html>

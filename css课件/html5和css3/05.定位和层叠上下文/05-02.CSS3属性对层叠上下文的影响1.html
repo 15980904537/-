@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS3属性对层叠上下文的影响1</title>
+        <style type="text/css">
+        /* 案例一分解 */
+        .box{
+            /* flex (flexbox) 容器的子元素，且 z-index 值不为 auto； */
+            display: flex;
+        }
+        .parent{
+            /* parent 变成了一个层叠上下文元素 */
+            width: 200px;
+            height: 100px;
+            background: #168bf5;   
+            z-index: 1;
+        }
+        .child{
+            color:red;
+            width: 100px;
+            height: 200px;
+            margin-top:-20px;
+            background: #32d19c;
+            position: relative;
+            z-index: -1;
+        }
+        /* 层叠上下文元素的  child  */
+
+        /* 层叠顺序:  块状元素  >  层叠上下background/border  parent  覆盖在 child 上面 */
+        </style>
+    </head>
+    <body>
+        <!-- 案例一分解:display:flex/inline-flex; -->
+        <div class="box">
+            <div class="parent">
+                parent
+                <div class="child">child</div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        a[class^=icon] {
+            background: green;
+            color: #fff;
+        }
+        
+        a[href$=pdf] {
+            background: orange;
+            color: #fff;
+        }
+        
+        a[title*=title] {
+            background: blue;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="xxx.pdf">我链接的是pdf文档</a>
+    <a href="#" class="icon">我的类名是icon</a>
+    <a href="#" title="我的title是珠峰">我的title是珠峰</a>
+
+
+
+    <!-- 属性
+    css2.1  val单词  [attr] [attr = val]  [attr~=val] [attr|=val]
+    css3    val字符  [attr ^=  val] [attr $=  val] [attr *=  val]
+    css4    忽略大小写 [attr *=  val i]  
+    -->
+</body>
+
+</html>

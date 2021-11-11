@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构性伪类选择器 first-child</title>
+    <style>
+        ol>li {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        ol>li>a {
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        ol li:first-child{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li><a href="##">Link1</a></li>
+        <li><a href="##">Link2</a></li>
+        <li><a href="##">link3</a></li>
+    </ol>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动模型(Float)</title>
+    <style type="text/css">
+    .main,.main1{
+        border:10px solid red;
+    }
+    img{
+        width:200px;
+        float: left;
+    }
+    .txt{
+        width: 400px;
+        float: left;
+    }
+    /* 公用的代码片段 clearfix + clear  reset.min.css*/
+    .clearfix::after{
+        content:'';
+        display: block;
+        clear: both;
+
+        width: 0;
+        height: 0;
+        font-size:0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 清浮动方法？原理 ？ 优缺点 ？
+    为什么？ - 子元素浮动 导致父元素高度塌陷(height:0;)
+    1. 手动添加height    - 缺点: 高度固定死
+    2. overflow:hidden  - 缺点: 溢出隐藏 - 下拉框
+       原理: BFC - 规则: BFC元素会把浮动元素的高度计算进来
+    3. clear:left/right/both  - 块的特点(div) + clear:both + 空内容  - 缺点: 添加无意义空标签
+    4.优化第三方案: 伪元素选择器  after  -  缺点: 代码量大
+    
+    面试题:
+    让元素消失有什么方法，发挥你的想象力？
+    overflow:hidden  => 
+    1.溢出隐藏
+    2.清除浮动
+    3.margin-top/bottom
+    4.自适应两列布局
+    -->
+    <div class="main clearfix">
+        <img src="https://inews.gtimg.com/newsapp_ls/0/12673365175_640330/0" alt="">
+        <div class="txt">
+            <a>超模范！小酒窝穿廓形西装条纹衫时尚感强 眼神清澈又萌又帅超模范！小酒窝穿廓形西装条纹衫时尚感强 眼神清澈又萌又帅超模范！</a>
+        </div>
+    </div>
+    <div class="main1 clearfix">
+        <img src="https://inews.gtimg.com/newsapp_ls/0/12673365175_640330/0" alt="">
+        <div class="txt">
+            <a>超模范！小酒窝穿廓形西装条纹衫时尚感强 眼神清澈又萌又帅超模范！小酒窝穿廓形西装条纹衫时尚感强 眼神清澈又萌又帅超模范！</a>
+        </div>
+    </div>
+    <ul>
+        <li>超模范！小酒窝穿廓形西装条纹衫时尚感强 </li>
+        <li>超模范！小酒窝穿廓形西装条纹衫时尚感强 </li>
+        <li>超模范！小酒窝穿廓形西装条纹衫时尚感强 </li>
+        <li>超模范！小酒窝穿廓形西装条纹衫时尚感强 </li>
+    </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS3的多列布局</title>
+  <style>
+   
+    *{margin:0;padding:0;}
+    
+    .col1,
+    .col2,
+    .col3,
+    .col4{
+      height: 300px;
+    }
+
+    .col1,
+    .col6 {
+      background-color: hotpink;
+    }
+
+    .col2,
+    .col7 {
+      background-color: blueviolet;
+    }
+
+    .col3,.col8 {
+      background-color: green;
+    }
+
+    .col4,
+    .col9 {
+      background-color: yellow;
+    }
+
+    .col5 {
+      background-color: tomato;
+
+    }
+
+
+    #parent{
+      /* column-width: 200px; */
+      column-count: 4;
+      column-rule: 5px dotted red;
+      column-gap: 10px;
+      }
+
+      table{
+        border-collapse: collapse;
+      }
+
+      /* table =  colspan 合并列 */
+      .col5{column-span: all;}
+
+  </style>
+</head>
+
+<body>
+  <!-- 作为父级容器 -->
+  <div id="parent">
+    <div class="col5">zhufeng</div>
+    <div class="col6">Never underestimate your power to change?Whatever is worth doing is worth doing well.Never underestimate your power to change?Whatever is worth doing is worth doing well.Never underestimate your power to change?Whatever is worth doing is worth doing well.</div>
+    <div class="col7">Never underestimate your power to change?Whatever is worth doing is worth doing well.Never underestimate your power to change?Whatever is worth doing is worth doing well.Never underestimate your power to change?Whatever is worth doing is worth doing well.
+    </div>
+    <div class="col8">Never underestimate your power to change?Whatever is worth doing is worth doing well.Never underestimate your power to change?Whatever is worth doing is worth doing well.Never underestimate your power to change?Whatever is worth doing is worth doing well.</div>
+  </div>
+
+
+  <table border="1">
+    <tr>
+      <td colspan="4" style="text-align: center;">信息</td>
+    </tr>
+    <tr>
+      <td>性别</td>
+      <td>姓名</td>
+      <td>成绩</td>
+      <td>学分</td>
+    </tr>
+    <tr>
+      <td>性别</td>
+      <td>姓名</td>
+      <td>成绩</td>
+      <td>学分</td>
+    </tr>
+  </table>
+
+
+
+  <hr style="height:500px;">
+
+  <div id="parent">
+    <div class="col1"></div>
+    <div class="col2"></div>
+    <div class="col3"></div>
+    <div class="col4"></div>
+    <div class="col1"></div>
+    <div class="col2"></div>
+    <div class="col3"></div>
+    <div class="col4"></div>
+  </div>
+
+
+ 
+
+  
+    
+  
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>层叠顺序研究</title>
+    <style>
+    /* 非定位块状元素 box >  html根层叠上下文元素的background/border  */
+
+
+    /* 根层叠上下文元素html */
+     html{
+         background-color: goldenrod;
+     }
+     /* 块状元素 */
+     .box{
+         width: 400px;
+         height: 400px;
+         background-color: red;
+     }
+    </style>
+</head>
+<body>
+   
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+   
+</body>
+</html>

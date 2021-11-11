@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体查询@media</title>
+    <style>
+        /*
+        原理:  
+        同时pc + 手机结构都在一套html写好
+        pc  header 显示  手机 header 隐藏
+        pc  icon隐藏  手机 icon 显示 
+         */
+        .header{width:1200px;margin:0 auto}
+        .header img{width: 100%;}
+        .touchHeader{display: none;}
+
+
+       /* 媒体查询: 重要 - 每个关键词之间需要用一个空格隔开
+       1.@media 媒介
+       2.媒介类型  screen设备  TV 电视  print 打印机.....
+       3.连接符  and   not  only
+       4.判断条件() 小括号   max-width/min-width/max-height/min-height
+       5.花括号{ css代码块 }
+
+       媒体查询 -  有条件的代码权重的覆盖
+        */
+        @media screen and (max-width:480px) {
+            .header{display: none;}
+            .touchHeader{display: block;}
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header 头部 -->
+    <div class="header">
+        <img src="header.png" alt="">
+    </div>
+
+    <!-- mod-home-mid-touchHeader 九空格-->
+    <div class="touchHeader">
+        <img src="icon.png" alt="">
+    </div> 
+</body>
+
+</html>

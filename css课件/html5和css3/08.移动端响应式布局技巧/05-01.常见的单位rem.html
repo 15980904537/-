@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rem单位</title>
+  <style>
+   /* webpack - postcss-pxtorem  设计稿 px   适配 rem  
+   rem:root element  of  fontSize  根元素的字体大小  html{font-size:16px;}  
+   1rem  =   16px   (默认) 
+   为了好计算  减少误差(>12   1,10,100,1000)   
+   
+   1rem  = 100px  
+
+
+   750   clinetWidth  ?
+   100       ? rem  
+
+   */
+   html{
+     font-size:100px;
+   }
+   .box{
+     border:1px solid #000;
+     width: 2rem;
+     height: 2rem;
+     background: red;
+   }
+  </style>
+
+</head>
+<div class="box"></div>
+<script>
+  // 针对750的设计稿
+  function refreshRem() {
+      var desW = 750,
+          winW = document.documentElement.clientWidth,
+          ratio = winW / desW;
+      document.documentElement.style.fontSize = ratio * 100 + 'px';
+  }
+  refreshRem();
+  window.addEventListener('resize', refreshRem);
+</script>
+<body>
+</body>
+
+</html>

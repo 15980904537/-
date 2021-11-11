@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器计算面试题解析</title>
+    <style>
+        /* :nth-of-type(1)     第一个span 
+          :nth-last-of-type(1) 倒数第一个span  
+        #awesome .highlight:nth-of-type(1):nth-last-of-type(1)  
+        => ul span => blue
+        => 100 + 10 + 10 + 10  = 130
+
+
+        #awesome .favorite:not(#awesome) .highlight
+        => ul li:not(#awesome) span   => red
+        => 100 + 10 + 0 + 100 + 10 = 220
+        同一个元素span  
+         */
+        #awesome .highlight:nth-of-type(1):nth-last-of-type(1) {color: blue;}
+        #awesome .favorite:not(#awesome) .highlight {color: red;}
+    </style>
+</head>
+
+<body>
+    <ul class="shopping-list" id="awesome">
+        <li><span>Milk</span></li>
+        <li class="favorite" id="must-buy"><span class="highlight">Sausage</span></li>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<script>
+    // 针对750的设计稿
+    function refreshRem() {
+        var desW = 750,
+            winW = document.documentElement.clientWidth,
+            ratio = winW / desW;
+        document.documentElement.style.fontSize = ratio * 100 + 'px';
+    }
+    refreshRem();
+    window.addEventListener('resize', refreshRem);
+</script>
+750    document.documentElement.clientWidth
+100    ?
+
+<!-- 
+        pc项目: 官网  系统 -  float +  position
+        pc+ pad + 手机: 官网  @media =>  bootstrap...
+        移动端: vue + react + mpvue ....
+        webpack + node    postcss-pxtorem
+
+
+        新闻类:
+        1.flexbox 布局
+        2.less  +  sass  +  css
+        3.单位: rem +  vw
+        4.iconfont: html(unicode)、css(::before)、symbol
+        
+-->
+750    375视口     
+40px     20
+vw * 3.75 = 20px
+vw = 20/3.75 =  5.333333333333333vw
+
+html{
+   font-size:20px;
+   font-size::5.333vw
+}
+设计稿 100px  *  100px 
+        5rem  *  5rem
+
+750     375视口 
+100px     50px
+html{
+   font-size:50px;
+   font-size::13.333vw
+}
+设计稿 100px  *  100px 
+       1rem   *  1rem
+
+375视口  =>  50px
+vw * 375/100 => 50px
+vw = 13.333333333333334  => 13.333
+
+
+CSS:
+-  浮动
+   -  清浮动方法  BFC(overflow:hidden)  IFC   FFC   GFC    
+   -  让元素隐藏的方法 
+-  定位
+   -  定位取值  参照对象
+   -  原理: 定位层叠上下文  - 层叠顺序 z-index
+-  背景
+   -  图片  background
+   -  sprites  => background-position  background-size
+-  动画  - @keyframes
+   - transiton 过渡动画
+   - @keyframes关键帧  
+   - steps(num,start/end)函数 
+   - 曲线 -  控制台面板
+-  移动端响应式适配 -  @meia
+    -  设备物理像素  设备独立像素  css像素  dpr
+    -  viewport
+-  单位 
+   -  px  em   %  
+   -  rem   vw   vh   vmin  vmax
+-  icon - @font-face
+   -  img:svg  gif  jpg jpeg png webp ...
+   -  background + sprites  =>  background-position ？？   px rem
+   -  iconfont:  unicode （&#x编码）  class(::before - content:'/')    symbol (svg)
+   -  纯css - 菜单
+-  选择器 - 高级选择器  
+   - 四大基本选择器
+   - 空格  >  +   ~   
+   - 伪类选择器  :nth-child  div:nth-of-type 
+   - 伪元素选择器  ::before （字体图标）  ::after(清除浮动)
+   - 属性选择器    CSS3 [class * = ""] [class ^ = ""] [class $ = ""]  (样式优化)
+-  CSS 高级属性 (不切图)
+   - box-radius
+   - box-shadow 、 text-shadow
+   - linear-gradient/渐变
+   - filter 
+
+-  预处理器  +   构建工具 +  webpack  gulp  grunt   
+   - 变量   --   @  $
+   - 嵌套
+   - minxin
+   - extend
+   - 操作语句 - 循环for if ....
+   - 作用域
+   - 函数
+   - 导入
+   ....
+
+ - webpack  loader
+ - vue
+ - react  
+ - ui 库
+
+ 

@@ -1,0 +1,172 @@
+<!DOCTYPE html><html><head><title>HTML+CSS面试题库整理</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: "Helvetica Neue", Arial, "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+<h4 id="htmlcss面试题库整理">HTML+CSS面试题库整理</h4>
+
+<p>【腾讯面试题】</p>
+
+<ul><li>简述什么叫做标签语义化</li>
+<li>HTML中块状标签和行内标签的特点</li>
+<li>使用css,让一个div消失在视野中；发挥想象力</li>
+<li>用css实现三栏布局；左定右定中间自适应</li>
+<li>至少写出3种css3新增的属性</li>
+</ul>
+
+<p>【百度外卖面试题】</p>
+
+<ul><li>css盒模型</li>
+<li>定位:absolute fixed relative static</li>
+</ul>
+
+<p>【百度移动面试题】</p>
+
+<ul><li>如何限制元素可点击区域为圆形？</li>
+<li>哪些元素默认是块元素？</li>
+<li>请列举你所知道的css3中新增的选择器?</li>
+<li>如何用css绘制一个三角(不允许使用图片)？</li>
+<li>请说明z-index的工作原理，适用范围?</li>
+<li>请列举你所知道css长度单位？</li>
+<li>css有哪些盒子模型？它们对应的样式是什么？如何让IE以标准模型渲染？</li>
+<li>如何实现绝对定位的DIV在容器中横竖均居中显示？</li>
+<li>元素在不同的浏览器中默认样式不尽相同，通常如何解决？</li>
+</ul>
+
+<p>【乐视网-TV部门面试题】</p>
+
+<ul><li>行内元素和块状元素分别有什么？区别是什么？</li>
+<li>假如现在你有一个衣橱，里面有很多各种各样的短袖，你如何从中挑选出最满意的。你将会如何整理和优化？</li>
+<li>有这样一个村庄，村里的每一个丈夫都背着妻子偷情，村里的每个妻子都知道除了自己丈夫以外的男人偷情，村里有一个规定，如果妻子知道自己的丈夫偷情必须当天处决。有一天村里的女头领说村里有一个丈夫偷情，接下来会发生什么？</li>
+<li>html5 你用过哪些？</li>
+</ul>
+
+<p>【美丽说前端面试题】</p>
+
+<ul><li>请给出【Sausage】的字体颜色值</li>
+</ul>
+
+<pre class="prettyprint hljs-light"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">'shopping-list'</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'shop'</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Milk<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">'favorite'</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'must-buy'</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">'highlight'</span>&gt;</span>Sausage<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"><br><span class="hljs-selector-tag">body</span>{<br>    <span class="hljs-attribute">color</span>:grey;<br>}<br><span class="hljs-selector-id">#shop</span> <span class="hljs-selector-class">.favorite</span><span class="hljs-selector-pseudo">:not(</span><span class="hljs-selector-id">#shop</span>) <span class="hljs-selector-class">.highlight</span>{<br>    <span class="hljs-attribute">color</span>:red;<br>}<br><span class="hljs-selector-id">#shop</span> <span class="hljs-selector-class">.highlight</span><span class="hljs-selector-pseudo">:nth-of-type(1)</span><span class="hljs-selector-pseudo">:nth-last-of-type(1)</span>{<br>    <span class="hljs-attribute">color</span>:blue;<br>}<br></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre>
+
+<ul><li>不使用定位和浮动样式，使得content内部标签放在一行显示？</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-light"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content"</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"left"</span>&gt;</span>HIGO-全球尖货买手点，时尚与价值兼备，深受年轻人喜爱的海淘APP<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"center"</span>&gt;</span>HIGO-全球尖货买手点，时尚与价值兼备，深受年轻人喜爱的海淘APP<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"right"</span>&gt;</span>HIGO-全球尖货买手点，时尚与价值兼备，深受年轻人喜爱的海淘APP<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"><br>    <span class="hljs-selector-class">.content</span>{<br>        <span class="hljs-attribute">width</span>:<span class="hljs-number">100px</span>;<br>    }<br></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre>
+
+<ul><li>红色的content元素块面积是多少？</li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-light"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"><br>    <span class="hljs-selector-class">.content</span>{<br>        <span class="hljs-attribute">background</span>:red;<br>        <span class="hljs-attribute">box-sizing</span>: border-box;<br>        <span class="hljs-attribute">width</span>:<span class="hljs-number">500px</span>;<br>        <span class="hljs-attribute">height</span>:<span class="hljs-number">500px</span>;<br>        <span class="hljs-attribute">border</span>:<span class="hljs-number">10px</span> solid <span class="hljs-number">#f66</span>;<br>        <span class="hljs-attribute">border-top</span>:<span class="hljs-number">50px</span>;<br>        <span class="hljs-attribute">padding</span>:<span class="hljs-number">50px</span> <span class="hljs-number">40px</span> <span class="hljs-number">30px</span> <span class="hljs-number">20px</span>;<br>        <span class="hljs-attribute">margin</span>:<span class="hljs-number">50px</span> <span class="hljs-number">40px</span> <span class="hljs-number">30px</span> <span class="hljs-number">20px</span>;<br>    }<br></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre>
+
+<ul><li>position display 分别都有什么值？</li>
+<li>transition animation 什么区别？</li>
+<li>列举三项transform的效果？</li>
+<li><p>列举三项html5有那些新特征？</p></li>
+<li><p>display:none 和visibility:hidden的区别？</p></li>
+<li>css中link和@import的区别是？</li>
+<li>position的absolute与fixed共同点与不同点</li>
+<li>介绍以下css的盒子模型？</li>
+<li>css选择符有哪些？哪些属性可以继承？优先级算法如何计算？css3新增伪类有哪些？</li>
+<li>css3有哪些新特性？</li>
+<li>为什么要初始化css样式？</li>
+<li>对BFC规范的理解？</li>
+<li>说说你对语义化的理解？</li>
+<li>HTML与XHTML 二者有什么区别</li>
+<li>常见兼容性问题</li>
+<li>浮动元素引起的问题和解决办法？</li>
+<li>简介盒子模型，并且可以画出盒子模型？</li>
+<li>rgba和opacity的透明效果有什么不同</li>
+<li>px和em的区别？</li>
+<li>描述一个’reset’的css文件并如何使用它</li>
+<li>如何居中div,如何居中一个浮动元素？</li>
+<li>css优先级算法如何计算？</li>
+<li>哪些css属性可以继承</li>
+<li>visibility 属性值有什么，是干嘛用的？</li>
+<li>两列布局&amp;三列布局？</li>
+<li>块级元素，行内元素，行内块级元素有哪些？</li>
+</ul>
+
+<p>【猛哥科技】</p>
+
+<ul><li>行内元素有哪些，块级元素有哪些？</li>
+<li>css选择器有哪些，css3新增伪类有哪些？</li>
+<li>如何居中div，如何居中一个浮动元素</li>
+<li>列出display的值，说明他们的作用，position的值，relative和absolute的定位原点是？</li>
+<li>经常遇到的浏览器兼容性有哪些？原因，解决方法是什么？阐述clear：both的意义？</li>
+</ul>
+
+<p>【恒信】</p>
+
+<ul><li>doctype的作用？严格模式和混杂模式如何区分？他们有何意义？</li>
+<li>介绍一下css的盒子模型。</li>
+<li>css选择符有哪些？那些属性可以继承？优先级算法如何计算？css3新增伪类有哪些？</li>
+<li>为什么要初始化css样式，请写出一般网站通常的初始化样式</li>
+<li>html5有哪些新特性？移除了哪些元素？如何处理html5新标签的浏览器兼容问题？</li>
+</ul>
+
+<p>【搜狐】</p>
+
+<ul><li>判断css优先级</li>
+<li>img标签的ale和title属性有什么异同</li>
+<li>页面如片加载过多，一般如何处理？</li>
+<li>css中display：none，和visibility：hidden区别</li>
+<li>描述浏览器渲染页面重排reflow和重绘的概念，他们的区别是什么？</li>
+<li>高级浏览器通过display inline-block来定义行内块级元素，ie6如何定意</li>
+<li>固定宽度和高度的容器如何在页面中水平居中，要求能够自适应屏幕尺寸</li>
+<li>移动端如何设置页面中字体的大小不会岁移动设备的屏幕尺寸等比例放大？</li>
+<li>谈谈对web开发语义化的理解。</li>
+<li>说说web开发中最能代表你技术水平的项目。</li>
+<li>前段优化手段，实践中有应用吗</li>
+<li>移动端设置视窗为设备宽度，默认不缩放，不允许用户缩放，meta标签如何写</li>
+</ul>
+
+<pre class="prettyprint hljs-light"><code class="hljs applescript">对于这个<span class="hljs-keyword">div</span>，&lt;<span class="hljs-keyword">div</span> style=“width：<span class="hljs-number">30</span>px；height：<span class="hljs-number">30</span>px；”&gt;&lt;/<span class="hljs-keyword">div</span>&gt;<br>Css3如何实现这个<span class="hljs-keyword">div</span>，延迟一秒，在两秒内向右均与移动<span class="hljs-number">200</span>px<br></code></pre>
+
+<ul><li>如何是一个div里面的文字垂直居中且该文字的大小根据屏幕大小自适应</li>
+</ul>
+
+<p>【面试题】</p>
+
+<ul><li>文档声明，doctype，严格模式和混杂模式区别，如何触发这两种模式，有何意义</li>
+<li>xhtml和html的区别，html语意化有什么意义</li>
+<li>知道的html5新特性，列举几个熟悉的css3伪类和伪元素</li>
+<li>html5，css3有什么新加的功能</li>
+<li>什么是响应式设计，响应式设计的基本原理是什么？</li>
+<li>：：before和：：after双冒号和单冒号有什么区别，解释一下这两个为元素的作用</li>
+<li>你对line-height是如何理解的，</li>
+<li>让页面里的字体变清晰，变细用css如何做</li>
+<li>如果需要手动写动画，你认为最小时间间隔是多久，为什么</li>
+<li>display：inline-block什么时候会显示间隔</li>
+<li>写出设置div背景为黑色，透明度为80%的语句，基于html5</li>
+<li>写出设置div边框为1颜色为红色的语句</li>
+<li>请列出ie，firefox，chrome，opera所使用的内核名称</li>
+<li>默认webkit内核的浏览器中，body的默认margin-top为多少</li>
+<li>请列出至少5个可以继承的css样式</li>
+<li>请列出至少5个不可以继承的css样式</li>
+<li>写一个用css实现的圆角代码</li>
+<li>描述你做过的前端开发中最得意的代码，并说明这段代码的高明之处</li>
+<li>你如何理解前端开发工程师这一职位，认为他有什么前景?</li>
+</ul>
+
+<p>【大厨网】</p>
+
+<ul><li>html页面的doctype有什么含义，请声明html5的头？</li>
+<li>img是行内元素还是块及元素？为什么 <br>
+-什么是css盒模型，在不同浏览器下，是否有不同的表现？如果有，请说明如何解决？</li>
+<li>请写出3个css的兼容性问题，并提出解决方案？</li>
+<li>给定一张200px的正方形图片，请让它在整个页面中居中</li>
+<li>如何利用css3的特性，实现响应式布局？</li>
+<li>什么是css sprites</li>
+<li>请实现描述的效果：直径为50px的圆形，带5px黑色阴影，每秒中左右翻转一次？</li>
+<li>简述HTML5新增的标签属性</li>
+<li> 简述它的作用</li>
+<li>内联元素与块状元素有哪些，是怎么显示的？</li>
+<li>简述CSS新增的属性，越多越好</li>
+<li>简述CSS盒模型，说说box-sizing</li>
+</ul></div></body></html>

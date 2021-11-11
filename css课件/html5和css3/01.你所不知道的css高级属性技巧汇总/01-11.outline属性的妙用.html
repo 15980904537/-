@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>outline属性的妙用</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            width: 600px;
+            margin: auto;
+        }
+
+        li {
+            padding: 10px;
+            border: 10px solid pink;
+            outline-offset: -10px;
+        }
+        li+li{
+            margin-top:-10px;
+        }
+        li:hover{
+            /* border:10px solid gold; */
+            outline:10px solid gold;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+
+</html>

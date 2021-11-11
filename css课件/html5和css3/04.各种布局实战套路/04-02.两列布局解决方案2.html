@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>两列布局解决方案2-float+margin(fix)</title>
+  <style>
+    /* 
+    width: 100%;margin-left:-200px;    作用: 缩小宽度  calc(100% - 200px)
+    margin-left:210px;                 作用: 位置的移动 留白  -  间距     
+     */
+
+    *{margin: 0;padding: 0;}
+    #left{width: 200px;height:500px;background-color: greenyellow;float: left;position: relative;}
+    #right-fix{float:left;width: 100%;margin-left:-200px;}
+    #right{height:700px;background-color: indianred;margin-left:210px;}
+    #inner{width:500px;height:300px;background-color: gold;clear: both;}
+
+
+    header{width: 100%;margin-left:-200px;height:500px;background-color: green;}
+  </style>
+</head>
+
+<body>
+  <div id="left"></div>
+  <!-- 为自适应元素定位父级元素 -->
+  <div id="right-fix">
+    <div id="right">
+      <div id="inner"></div>
+    </div>
+  </div>
+
+  <div style="clear:both"></div>
+
+  
+  <header></header>
+</body>
+
+</html>

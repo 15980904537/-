@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>同一个堆叠上下文元素排列顺序</title>
+        <style type="text/css">
+        .wrapper {
+            position: relative;
+            z-index: 1;
+            width: 450px;
+            height: 350px;
+            background-color: #fdd;
+            border: 2px solid #e6a23c;
+        }
+
+        .wrapper>div {
+            padding: 0 5px;
+            width: 200px;
+            height: 100px;
+            box-sizing: border-box;
+            border: 1px dashed #ccc;
+        }
+
+        .wrapper div:nth-of-type(1) {
+            position: relative;
+            z-index: -1;
+            background-color: #FEF49C;
+        }
+
+        .wrapper div:nth-of-type(2) {
+            display: block;
+            margin: -50px 0 0 50px;
+            background-color: #ADF4FF;
+        }
+
+        .wrapper div:nth-of-type(3) {
+            float: left;
+            margin: -50px 0 0 100px;
+            background-color: #B2FBA1;
+        }
+
+        .wrapper div:nth-of-type(4) {
+            display: inline-block;
+            margin-left: -150px;
+            background-color: #FFC7C7;
+        }
+
+        .wrapper div:nth-of-type(5) {
+            position: relative;
+            margin: -50px 0 0 200px;
+            background-color: #B6CAFF;
+        }
+
+        .wrapper div:nth-of-type(6) {
+            position: absolute;
+            z-index: 1;
+            margin: -50px 0 0 250px;
+            background-color: #EEEEEE;
+        }
+    </style>
+    </head>
+
+    <body>
+        <!--  在同一个层叠上下文中，子元素按照 层叠顺序 规则进行层叠  -->
+        <div class="wrapper">
+            <div>position: relative;<br>z-index: -1;</div>
+            <div>display: block;</div>
+            <div>float: left;</div>
+            <div>display: inline-block;</div>
+            <div>position: relative;</div>
+            <div>position: absolute;<br>z-index: 1;</div>
+        </div>
+
+
+        <!-- 
+        1.  z-index  负值
+        2.  块级元素
+        3.  浮动元素
+        4.  行内块级元素
+        5.  定位元素 z-index:auto
+        6.  z-index 正值
+
+        div层叠的顺序:  div1 <  div2 < div3 < div4 <  div5  < div6
+
+         -->
+    </body>
+
+</html>

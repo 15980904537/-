@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex响应式布局</title>
+    <style>
+        html{font-size:100px;}
+        .txt{font-size:.34rem;}
+
+        /* flex 弹性布局
+        flex 可以控制子元素的排列方式  -  默认方向:水平方向
+        flex-direction: 方向  row 水平  column 垂直    
+
+
+        [旧]
+        box-orient: horizontal; 水平  vertical 垂直方向
+        面试题: 多行文本省略号(2行)
+
+
+        版本: 前缀插件 autoprefix
+        box  - flexbox - flex + -webkit
+         */
+        .item{
+            display: flex;
+        }
+        .txt{
+            /* 100% - 2.34rem  = ? */
+            flex:1;
+        }
+        .txt h2{
+            display:-webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+        .pic{
+            width: 2.34rem;
+        }
+        .pic img{
+            width: 100%;  
+        }
+
+
+        p{
+            /* 省略号 - 四个条件 */
+            display:-webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+
+        .secBox{
+            display: flex;
+            /* 自动折行 */
+            flex-wrap: wrap;
+        }
+        .secBox .item{
+            width: 20%;  
+        }
+        .secBox .item img{
+            width: 100%;  
+        }
+
+
+       .header{display: flex;justify-content: space-between;}
+        .logo{width:0.6rem;height:.36rem;background: yellow;}
+        .search{width:2rem;height:.36rem;background: green;}
+        .user{width:0.6rem;height:.36rem;background: yellow;}
+
+
+        .colBox{
+            width: 100%;
+            height: 3rem;
+            margin:10px 0 0;
+            border:1px solid #000;
+            display: flex;
+            /* align-items:center; */
+            /* 提前条件: 多个轴 */
+            align-content:center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo"></div>
+        <div class="search"></div>
+        <div class="user"></div>
+    </header>  
+
+
+    <div class="colBox">
+        <div class="logo"></div>
+        <div class="search"></div>
+        <div class="user"></div>
+    </div>
+
+    
+    <!-- 左文 右图  -->
+    <div class="item">
+        <div class="txt">
+            <h2>马云：蚂蚁已完成上市定价 P2P根本不是互联网金融蚂蚁已完成上市定价 P2P根本不是互联网金融蚂蚁已完成上市定价 P2P根本不是互联网金融蚂蚁已完成上市定价 P2P根本不是互联网金融</h2>
+        </div>
+        <div class="pic">
+            <img src="http://cms-bucket.ws.126.net/2020/1024/9d9bc7e3j00qioxnh00fzc0009c0070c.jpg?imageView&thumbnail=234y146&quality=45&interlace=1&enlarge=1&type=webp" alt="">
+        </div>
+    </div>
+
+
+    <p>
+        马云：蚂蚁已完成上市定价 P2P根本不是互联网金融蚂蚁已完成上市定价 P2P根本不是互联网金融蚂蚁已完成上市定价 P2P根本不是互联网金融蚂蚁已完成上市定价 P2P根本不是互联网金融
+    </p>
+
+
+    <div class="secBox">
+        <!-- 一个icon -->
+        <div class="item">
+            <img src="http://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cb65daec7ef7b52cc785f88f78efba37.png?w=216&h=228&bg=FDF1E6" alt="">
+        </div>
+        <div class="item">
+            <img src="http://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cb65daec7ef7b52cc785f88f78efba37.png?w=216&h=228&bg=FDF1E6" alt="">
+        </div>
+        <div class="item">
+            <img src="http://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cb65daec7ef7b52cc785f88f78efba37.png?w=216&h=228&bg=FDF1E6" alt="">
+        </div>
+        <div class="item">
+            <img src="http://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cb65daec7ef7b52cc785f88f78efba37.png?w=216&h=228&bg=FDF1E6" alt="">
+        </div>
+        <div class="item">
+            <img src="http://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cb65daec7ef7b52cc785f88f78efba37.png?w=216&h=228&bg=FDF1E6" alt="">
+        </div>
+        <div class="item">
+            <img src="http://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cb65daec7ef7b52cc785f88f78efba37.png?w=216&h=228&bg=FDF1E6" alt="">
+        </div>
+        <div class="item">
+            <img src="http://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cb65daec7ef7b52cc785f88f78efba37.png?w=216&h=228&bg=FDF1E6" alt="">
+        </div>
+        <div class="item">
+            <img src="http://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cb65daec7ef7b52cc785f88f78efba37.png?w=216&h=228&bg=FDF1E6" alt="">
+        </div>
+        <div class="item">
+            <img src="http://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cb65daec7ef7b52cc785f88f78efba37.png?w=216&h=228&bg=FDF1E6" alt="">
+        </div>
+        <div class="item">
+            <img src="http://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cb65daec7ef7b52cc785f88f78efba37.png?w=216&h=228&bg=FDF1E6" alt="">
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        // 针对750的设计稿
+        function refreshRem() {
+            var desW = 750,
+                winW = document.documentElement.clientWidth,
+                ratio = winW / desW;
+            document.documentElement.style.fontSize = ratio * 100 + 'px';
+        }
+        refreshRem();
+        window.addEventListener('resize', refreshRem);
+    </script>
+</body>
+
+</html>

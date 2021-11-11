@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例3 - 清除浮动</title>
+    <style>
+        /* 清除浮动的方法 - height + BFC条件 + clear:both + clearfix */
+        .container {
+            width: 300px;
+            border: 5px solid #fcc;
+           overflow: hidden;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            float: left;
+            border: 5px solid #f66;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <ul>
+        <li>珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训</li>
+        <li>珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训</li>
+        <li>珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训</li>
+        <li>珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训</li>
+        <li>珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训</li>
+    </ul>
+</body>
+
+</html>

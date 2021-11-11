@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不同堆叠上下文元素排列顺序</title>
+    <style type="text/css">
+    html{
+        background: darkblue;
+    }
+    .box1{
+        width: 200px;
+        height: 200px;
+        background-color: darkcyan;
+        position: relative;
+        z-index: 1;
+    }
+   .box2{
+       width: 200px;
+       height: 200px;
+       background: hotpink;
+       position: relative;
+       z-index:2;
+   }
+   .box3{
+       width: 200px;
+       height: 200px;
+       background-color: greenyellow;
+   }
+
+   .box1 p{
+       width: 100px;
+       height: 100px;
+       position: absolute;
+       background-color: khaki;
+       z-index: 999;
+   }
+   .box2 p{
+       width: 100px;
+       height: 100px;
+       position: absolute;
+       background-color: lawngreen;
+       z-index: -999;
+   }
+    </style>
+</head>
+<body>
+    <!-- 文字1 999 >  文字2 -999 
+    包裹的父容器的层叠的顺序大小
+    box1 p  <  box2 p 
+    -->
+    
+    <!--  z-index: 1;  -->
+    <div class="box1">
+        <!-- z-index: 999; -->
+        <p>文字1</p>
+    </div>
+
+    <!--  z-index:2; -->
+    <div class="box2">
+        <!--  z-index: -999; -->
+        <p>文字2</p>
+    </div>
+
+</body>
+</html>

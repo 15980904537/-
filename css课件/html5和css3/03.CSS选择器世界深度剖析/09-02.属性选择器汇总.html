@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        /* [type=text]{
+            border:10px solid red;
+        } */
+
+
+      /* 含有(包含)text的单词  text1 不等于text这个单词    text  text1  */
+        /* [type~=text]{
+            border:10px solid red;
+        } */
+
+
+
+       /* 以text单词开头  或者   text- 单词开头 */
+        /* [type|=text]{
+            border:10px solid red;
+        }  */
+
+        /* 以上的四个都是单词匹配 CSS2.0  */
+
+
+
+        /* 以上的四个都是字符匹配CSS3.0 */
+       /* ^  以text开头的字符就可以   */
+        /* [type^=text]{
+            border:10px solid red;
+        } */
+
+
+       /* $  以text结束的字符就可以  t  e  x  t  */
+        /* [type$=text]{
+            border:10px solid red;
+        } */
+
+
+       /* 任意位置有text四个字符即可  */
+        [type*=text]{
+            border:10px solid red;
+        }
+        
+
+
+
+
+       /*  class 里面包含icon_   或者 icon_ 开头的class都会走这段样式
+       
+       class="hd_s_set icon_set"  
+           hd_s_search icon_search   
+
+         .icon_set,.icon_search,.....{}
+         */
+        [class*="icon_"], [class^=icon_] {
+            font-family: SinaHomeFont!important;
+            speak: none;
+            font-style: normal;
+            font-weight: 400;
+            -webkit-font-feature-settings: normal;
+            font-feature-settings: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+    </style>
+</head>
+<body>
+    <div bg = "color" type="button-text">珠峰培训</div> 
+    <div bg = "color" type="text-button">珠峰培训</div> 
+    <div bg = "color" type="btn-text-button">珠峰培训</div> 
+
+    <input type="text" class="txt">
+    <input type="text" class="txt">
+
+
+    <input type="submit" class="btn">
+
+
+    
+
+</body>
+</html>

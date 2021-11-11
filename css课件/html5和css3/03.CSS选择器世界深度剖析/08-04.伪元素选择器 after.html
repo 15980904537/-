@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器 after</title>
+    <style>
+        .left{
+           width: 200px;    
+           height: 200px; 
+           background: red; 
+          float: left;       
+        }
+        .right{
+           width: 200px;    
+           height: 200px; 
+           background: gold;  
+           float: left; 
+        }
+
+        /* ::after   clearfix 放在reset.min.css*/
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 空标签 + 块级特点元素div  + clear:both -->
+   <div class="main clearfix">
+       <div class="left"></div>
+       <div class="right"></div>
+       <!-- <div style="clear: both;"></div> --> 
+   </div>
+   <ul>
+       <li>珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训</li>
+       <li>珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训</li>
+       <li>珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训</li>
+       <li>珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训</li>
+       <li>珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训</li>
+   </ul>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>等分布局解决方法1-float+width</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .col1 {
+      background-color: hotpink;
+    }
+
+    .col2 {
+      background-color: lightblue;
+    }
+
+    .col3 {
+      background-color: green;
+    }
+
+    .col4 {
+      background-color: yellow;
+    }
+
+    .col5 {
+      background-color: pink;
+    }
+
+    #parent {
+      /* 负值整体移动 把左边的边框线隐藏起来 */
+       margin-left: -10px;
+    }
+
+    #parent>div {
+      float: left;
+      width: 20%;
+      height: 500px;
+      border-left: 10px solid #fff;
+      box-sizing: border-box;
+      /* 盒子模型
+        box-sizing:content-box  宽度 = width + border-left/right + padding-left/right
+        box-sizing:content-box  高度 = height + border-top/bottom + padding-top/bottom
+
+        box-sizing:border-box   宽度 = width   高度 = height (borde+padding已经算到宽度中了)
+       */
+    }
+    /* :first-child :nth-child(1)  class = "" */
+  </style>
+</head>
+
+<body>
+  <!-- 作为父级容器 -->
+  <div id="parent" class="clearfix">
+    <div class="col1"></div>
+    <div class="col2"></div>
+    <div class="col3"></div>
+    <div class="col4"></div>
+    <div class="col5"></div>
+
+  </div>
+</body>
+
+</html>

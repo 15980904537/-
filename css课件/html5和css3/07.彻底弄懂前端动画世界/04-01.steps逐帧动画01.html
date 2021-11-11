@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>steps逐帧动画</title>
+    <style>
+        .step1 {
+            width: 200px;
+            height: 312px;
+            margin: 50px;
+            background: red;
+            /* step-start - 0% blue 忽略掉了
+            step-start : 跳过0% 第一帧 0%  
+             */
+            animation: color 1s step-start infinite;
+        }
+
+        .step2 {
+            width: 200px;
+            height: 312px;
+            margin: 50px;
+            background: red;
+            /* step-end 100% green 忽略掉了 
+            step-end  跳过最后一帧100%
+            */
+            /* animation: color 1s step-end infinite; */
+        }
+        @keyframes color{
+            0%{background-color: blue;}
+            50%{background-color: blueviolet;}
+            100%{background-color: green;}
+        }
+    </style>
+</head>
+
+<body>
+    <div class="step1"></div>
+    <div class="step2"></div>
+</body>
+
+</html>

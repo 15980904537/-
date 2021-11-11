@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth-child和nth-of-type的区别</title>
+    <style>
+        /* 总结: 标签名一样  nth-child + nth-of-type */
+    p:nth-of-type(2n+1){
+        background-color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <section>
+        <p>我是第1个p标签</p>
+        <p>我是第2个p标签</p>
+        <p>我是第2个p标签</p>
+        <p>我是第2个p标签</p>
+        <p>我是第2个p标签</p>
+        <p>我是第2个p标签</p>
+        <p>我是第2个p标签</p>
+        <p>我是第2个p标签</p>
+    </section>
+</body>
+
+</html>

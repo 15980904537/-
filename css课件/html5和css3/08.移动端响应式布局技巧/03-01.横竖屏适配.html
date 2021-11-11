@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 手机宣传页 上下滑屏特效  screen and  省略不写*/
+        html{
+            background-color: gold;
+        }
+        /* 竖屏*/
+        @media screen and (orientation: portrait) {
+            .tip{display: none;}
+        }
+
+        /* 横屏 */
+        @media (orientation: landscape) {
+            .tip{display: block;font-size:50px;text-align: center;}
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 提示 -->
+    <div class="tip">请把手机转到竖屏的状态！</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>等分布局解决方法2-table+table-cell</title>
+  <style>
+    *{margin: 0;padding: 0;}
+
+    #parent{display: table;width: 100%;}
+    #parent>div{display: table-cell;height:400px;}
+
+
+    #parent>div:nth-child(2n){background-color: greenyellow;}
+    #parent>div:nth-child(2n+1){background-color: gold;}
+    
+  </style>
+</head>
+
+<body>
+  <!-- 作为父级容器 -->
+  <div class="wrap">
+    <div id="parent">
+      <div class="col1">
+      </div>
+      <div class="col2">
+      </div>
+      <div class="col3">
+      </div>
+      <div class="col4">
+      </div>
+    </div>
+</div>
+</body>
+
+</html>

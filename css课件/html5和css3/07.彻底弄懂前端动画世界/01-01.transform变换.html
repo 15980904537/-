@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform变换</title>
+  <style>
+   .item1{
+      width: 314px;
+      height: 300px;
+      background-color: #333;
+
+      /* transition-property:all;
+      transition-duration: 1s;
+      transition-timing-function:ease;
+      transition-delay:.2s; */
+
+      /* 小技巧: 鼠标移入移出同时都有动画  transition 加在元素本身身上 */
+      transition:all 1s ease-in-out .2s;
+     
+
+      /* transform +  transition
+      transition-property:css属性名称  /  all 多个
+      transition-duration:1s  持续时间  - 越长 - 越慢  反之越块  0.1s = .1s
+      transition-timing-function：运动曲线 ease  ease-in ease-out ease-in-out  linear
+      */
+   }
+   .item1:hover{
+     width:500px;
+     background-color: red;
+     /* transform: translateY(-20px); */
+     transform: translate(0,-20px);
+   }
+
+
+  
+   .item2{
+     width: 400px;
+     height: 200px;
+     overflow: hidden;
+   }
+   .item2 img{
+     width: 400px;
+     height: 200px;
+     transition: all 1s linear;
+   }
+   .item2:hover img{
+     transform: scale(1.5);
+   }
+
+
+   /* 角度动画  rotate */
+   .item3{position: relative;
+   overflow: hidden;
+   }
+   .icon{width: 50px;height:50px;background: pink;}
+   .layer{width: 50px;height:50px;background: rgba(0,0,0,.5);
+      position: absolute;
+      top:0;
+      left:0;
+      /* display:none 隐藏  => rotate(90deg) */
+      transform: rotate(90deg);
+      transform-origin:left bottom;
+      transition: all .3s ease-out;
+   }
+   .item3:hover .layer{
+      /* top:0; display:block  显示*/
+      transform: rotate(0deg);
+   }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- transform 位移 translate-->
+  <div class="item1"></div>
+
+   <!-- transform缩放 scale -->
+  <div class="item2">
+    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c0c05274f2fbb55fbccb89622f798907.jpg?w=632&h=340" alt="">
+    <h2></h2>
+  </div>
+
+   <!-- transform rotate 角度 deg -->
+  <div class="item3">
+      <div class="icon"></div>
+      <div class="layer"></div>
+  </div>
+
+
+  <!-- 让元素隐藏的方式有多少方法？发挥你的想象力
+  display:none   -  display:block
+  opactiy:0      -  opactiy:1 
+  transform:scale(0)  -  transform:scale(1)
+  transform:rotate(90deg) -  transform:rotate(0deg)
+  transform:translate(-9999px)
+  position + left:-9999px
+  ....   
+  -->
+  <div style="height:1000px"></div>
+</body>
+
+</html>

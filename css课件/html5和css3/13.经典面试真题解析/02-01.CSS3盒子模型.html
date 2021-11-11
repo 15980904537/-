@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 盒子的面积大小是多少？ w  *  h
+        什么是盒子模型，画图，box-sizing,计算题 
+        
+    box-sizing:content-box(默认)
+    宽度 = width + padding-left/right + border-left/right
+    高度 = height + padding-top/bottom + border-top/bottom
+    
+    box-sizing:border-box
+    宽度 = width  ( padding-left/right + border-left/right )
+    高度 = height  ( padding-top/bottom + border-top/bottom )
+
+    width = 500 + 20 + 40 +  10 + 10 = 580
+    height = 500 + 50 + 30  + 0 +  10 = 590
+    -->
+    <div class="content"></div>
+    <style>
+        .content {
+            background: red;
+            width: 500px;
+            height: 500px;
+            /* 上  0 下 10  左 10  右  10 */
+            border: 10px solid #f66;
+            border-top: 50px;
+            /* 上 50  右 40  下 30  左  20 顺时针*/
+            padding: 50px 40px 30px 20px;
+            margin: 50px 40px 30px 20px;
+        }
+    </style>
+
+</body>
+
+</html>

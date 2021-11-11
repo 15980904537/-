@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 请CSS3新增的伪类选择器 / 伪类和伪元素的区别 / 选择器优先级权重 / 计算题
+        Sausage的颜色？
+
+        body 继承属性
+        span 属性
+        伪类选择器 属性
+
+        0  -   *     :not
+        1  -   标签   伪元素
+        10 -   class 伪类
+        100 -  id
+        1000 - !important
+        */
+
+        body {
+            color: grey;
+        }
+        /* 100 +  10 +  100 + 10 = 220*/
+        #shop .favorite:not(#shop) .highlight {
+            color: red;
+        }
+        /* 100 + 10 + 10 + 10 = 130 */
+        #shop .highlight:nth-of-type(1):nth-last-of-type(1) {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class='shopping-list' id='shop'>
+        <li><span>Milk</span></li>
+        <li class='favorite' id='must-buy'><span class='highlight'>Sausage</span></li>
+    </ul>
+
+</body>
+
+</html>

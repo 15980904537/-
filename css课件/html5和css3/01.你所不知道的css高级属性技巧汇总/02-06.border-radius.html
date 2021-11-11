@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius圆角</title>
+    <style>
+        div {
+            float: left;
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            background-color: green;
+        }
+        /* margin + padding + border....  左上角 顺时针  - 取对角 */
+        .box1{
+            border-radius:50px;
+        }
+        .box2{
+            border-radius:50px 80px;
+        }
+        .box3{
+            border-radius:50px 80px  100px;
+        }
+        .box4{
+            border-radius:50px 80px  100px  150px;
+        }
+        .box5{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+
+    <div class="box2"></div>
+
+    <div class="box3"></div>
+
+    <div class="box4"></div>
+
+    <div class="box5"></div>
+
+
+</body>
+
+</html>

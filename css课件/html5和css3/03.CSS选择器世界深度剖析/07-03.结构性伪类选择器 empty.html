@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构性伪类选择器 empty</title>
+    <style>
+        /* :empty选择器表示的就是空。用来选择没有任何内容的元素，这里没有内容指的是一点内容都没有，哪怕是一个空格 */
+        p {
+            background: orange;
+            min-height: 30px;
+        }
+
+        p:empty {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <p>我是一个段落</p>
+    <p> </p>
+    <p></p>​
+</body>
+
+</html>

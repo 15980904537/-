@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        :nth-child()   不管标签名称 奇数行(div) 1、3、5、7
+        :nth-of-type()  div 先过滤出来  [div1,div2,div3,div4]  div1  div3
+        */
+        /* div:nth-child(2n+1){
+            background-color: green;
+        } */
+        div:nth-of-type(2n+1) {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>珠峰珠峰珠峰珠峰1</div>
+    <p>珠峰珠峰珠峰珠峰2</p>
+    <div>珠峰珠峰珠峰珠峰3</div>
+    <p>珠峰珠峰珠峰珠峰4</p>
+    <div>珠峰珠峰珠峰珠峰5</div>
+    <p>珠峰珠峰珠峰珠峰6</p>
+    <div>珠峰珠峰珠峰珠峰7</div>
+</body>
+
+</html>

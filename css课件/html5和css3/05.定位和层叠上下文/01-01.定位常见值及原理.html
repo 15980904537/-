@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位常见值及原理</title>
+    <style>
+        *{margin:0;padding:0;}
+        div{width: 200px;height: 200px;margin:20px;}
+        .static{background-color: gray;
+           /* 默认值 方位不起作用 */
+           position: static;
+           top:50px; 
+        }
+        .relative{background-color: green;
+        /*position: relative;
+        1.方位top/bottom/left/right  + z-index 起作用
+        2.作为绝对定位的参照物
+
+        不会脱离文档流  +  基点: 他自己本身
+           */
+            position: relative;
+            top:50px;
+        }
+        .absolute{background-color: blueviolet;
+            /* 
+            1.会脱离文档流  +  基点: 父元素 position(非static)
+            先看自己的父元素 - 没有position - html -  参照窗口
+                     父元素 -   有position - absolute跟着父元素进行位置的改变
+              */
+            position: absolute;
+            top:50px;
+
+        }
+        .fixed{background-color: olive;
+           /* 会脱离文档流  +  基点: 浏览器窗口  +  滚动条滚动的时候固定不动*/
+           position: fixed;
+           right:0;
+           bottom:0;
+        }
+       .sticky{background-color: greenyellow;
+           /* relative + fixed  */
+            position: sticky;
+            top:0;
+       }
+
+        .parent{
+            /* position 他就是参照物  */
+            position:relative;
+            margin:auto;
+            width:400px;height:400px;border:10px solid #000;
+        }
+    </style>
+</head>
+<body>
+     <!-- sticky粘连定位 -->
+     <div class="sticky">sticky粘连定位</div>
+
+
+    <!-- static默认值 -->
+    <div class="static">static默认值</div>
+
+    <!-- relative相对定位 -->
+    <div class="relative">relative相对定位</div>
+
+    <!-- absolute绝对定位 -->
+    <div class="parent">
+        <div class="absolute">absolute绝对定位</div>
+    </div>
+
+    <!-- fixed固定定位 -->
+    <div class="fixed">fixed固定定位</div>
+
+    
+
+     <div style="height:1400px;"></div>
+
+
+     <!--   覆盖  叠加  下拉框     自然堂    9等份  九宫格  img
+     是否脱离流:
+     1.脱离  -   absolute  +  fixed (固定不动)
+     2.不脱离  -  relative
+
+    参照物:
+    1. absolute -  父元素 position:relative  
+    2. fixed   -  窗口
+    3. relative - 自己本身位置
+
+    相同点:  方位   +   z-index 提高层级
+
+    口号: 用完浮动 立马清浮动   用完绝对定位 一定要给父元素加参照 （position:relative）
+      -->
+</body>
+</html>

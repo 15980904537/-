@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态伪类选择器 a的四种状态</title>
+    <style>
+        /* 顺序  -  l(link)ov(visited)e  h(hover)a(active)te   喜欢 讨厌  */
+        
+        a:link {
+            color: #000;
+        }
+        
+        a:visited {
+            color: grey
+        }
+        
+        a:hover {
+            color: red
+        }
+        
+        a:active {
+            background-color: gold;
+        }
+        /* 
+    
+    a{}
+    a:hover{}
+     */
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <a href="#">庭院深深，不知有多深？</a>
+    </div>
+</body>
+
+</html>

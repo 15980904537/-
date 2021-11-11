@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器 placeholder</title>
+    <style>
+        input::-webkit-input-placeholder {
+            color: green;
+        }
+
+        /*  IE10+ */
+        input:-ms-input-placeholder {
+
+            color: green;
+        }
+
+        /* Firefox4-18 */
+        input:-moz-placeholder {
+
+            color: green;
+        }
+
+        /* Firefox19+ */
+        input::-moz-placeholder {
+            color: green;
+        }
+
+
+        /* ::placeholder   -webkit  -moz  -ms-placeholder*/
+
+        /* CSS3 属性
+        -webkit-box-radius:
+        border-radius: 
+        插件 -  自动添加前缀  autoprefixer + webpack
+         */
+    </style>
+</head>
+
+<body>
+    <input id="test" placeholder="Placeholder text!">
+</body>
+
+</html>

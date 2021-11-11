@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见单位</title>
+    <style>
+    /* 面试题库: 常用的长度单位有哪些? 单位区别 项目实战
+    pc: px  %  em 
+    手机: rem  vw  vh  vmin  vmax 
+
+
+    px 像素 - 固定写死
+    %  相对单位 -  参照对象 父元素 的宽高大小
+    em 相对单位 -  参照对象 父元素 的字体大小font-size  1em = 16px (前提: 父元素是html)  
+               -  p 首段缩进2em   logo 文字 text-indent:-9999em;
+    */
+    html{height:100%}
+    body{height:100%;}
+    .main{width: 100%;height:100%;background-color: gold;}
+
+   .parent{font-size:20px;}
+   .parent p{text-indent: 2em;}
+
+   .logo{
+       width: 124px;
+       height: 40px;
+       background:#000 url(https://passport.baidu.com/static/passpc-account/img/baidu.png) no-repeat;
+        background-size: cover;
+        text-indent: -999em;
+   }
+    </style>
+</head>
+
+<body>
+<h1 class="logo">
+    <a href="#">淘宝网</a>
+</h1>  
+
+<div class="parent">
+    <p>珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训珠峰培训</p>
+</div>
+
+<div class="main">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+
+<div class="item">
+    <div class="iteminner"></div>
+    <div class="iteminner"></div>
+    <div class="iteminner"></div>
+    <div class="iteminner"></div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS3属性对层叠上下文的影响4</title>
+        <style type="text/css">
+        /* 案例四分解*/
+        .parent4{
+            width: 200px;
+            height: 100px;
+            background: #168bf5;
+            filter: blur(1px);
+        }
+        .child4{
+            width: 100px;
+            height: 200px;
+            background: #32d19c;
+            position: relative;
+            z-index: -1;
+        }
+        </style>
+    </head>
+    <body>
+        <!-- 案例四分解:filter -->
+        <div class="parent4">
+            parent
+            <div class="child4">child</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>不定图片尺寸</title>
+    <style>
+        /* 
+    辅助元素 -  i
+    利用vertical-align: 
+    1.主体元素inline-block
+    2.宽度0 height:100% 
+    3.vertical-align:middle
+    */
+        
+        img {
+            vertical-align: middle;
+        }
+        
+        i {
+            display: inline-block;
+            width: 0;
+            height: 100%;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <p style="height: 300px; background-color: #ccc; text-align: center">
+        <img src="images/mm1.jpg" alt="" />
+        <i></i>
+    </p>
+</body>
+
+</html>

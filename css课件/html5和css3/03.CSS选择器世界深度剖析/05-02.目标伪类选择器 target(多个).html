@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>目标伪类选择器 target</title>
+    <style>
+        #brand:target {
+            background: orange;
+            color: #fff;
+        }
+
+        #jake:target {
+            background: blue;
+            color: #fff;
+        }
+
+        #aron:target {
+            background: red;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h2><a href="#brand">Brand</a></h2>
+    <div class="menuSection" id="brand">
+        content for Brand
+    </div>
+    <h2><a href="#jake">Brand</a></h2>
+    <div class="menuSection" id="jake">
+        content for jake
+    </div>
+    <h2><a href="#aron">Brand</a></h2>
+    <div class="menuSection" id="aron">
+        content for aron
+    </div>
+</body>
+
+</html>

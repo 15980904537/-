@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS选择器正则表达式</title>
+    <style type="text/css">
+        li {
+            font-size: 50px;
+            list-style: none;
+        }
+
+        /* 以t开头的字符 - three */
+        li[data-index^='t'] {
+            color: red;
+        }
+
+        /* 以f开头的字符 - five */
+        li[data-index^='f'] {
+            color: blue;
+        }
+
+        /* 以f开头的字符(忽略大小写) - FOUr five */
+        li[data-index^='f'i]:after {
+            content: '支持i正则';
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <li data-index="one">data-index="one"</li>
+    <li data-index="Two">data-index="Two"</li>
+    <li data-index="three">data-index="three"</li>
+    <li data-index="FOUr">data-INDEX="FOUr"</li>
+    <li data-index="five">DATA-index="five"</li>
+</body>
+
+</html>

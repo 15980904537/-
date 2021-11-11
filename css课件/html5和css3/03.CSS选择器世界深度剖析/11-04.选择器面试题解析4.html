@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器计算面试题解析</title>
+    <style>
+        /*  
+        ul#awesome #must-buy   =>  ul li   => 第二个li  red
+         .favorite span        =>  li span => blue 
+
+         Sausage  blue  
+        */
+        ul#awesome #must-buy {color: red;}
+        .favorite span {color: blue !important;}
+    </style>
+</head>
+
+<body>
+    <ul class="shopping-list" id="awesome">
+        <li><span>Milk</span></li>
+        <li class="favorite" id="must-buy"><span class="highlight">Sausage</span></li>
+    </ul>
+</body>
+
+</html>

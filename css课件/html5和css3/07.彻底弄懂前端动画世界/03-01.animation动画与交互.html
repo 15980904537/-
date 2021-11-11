@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aniamtion动画与交互</title>
+  <style>
+    /* 面试题: 手写一个气球漂浮的动画  animation  八大属性
+       关键帧动画 - @keyframes  + animation
+     */
+    .box {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(red, blue, green);
+      border-radius: 50%;
+      animation-name: boxAnimation;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      /* animation-fill-mode: both; */
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      /* animation-play-state: paused; */
+
+
+      /* animation: boxAnimation 1s 1s 2 linear; */
+      /* 复合属性 时间: 1个时间 - 持续时间   2个时间 - 持续时间  延迟时间
+      1s 持续
+      1s 延迟
+      1  次数
+       */
+    }
+
+    /* 关键帧动画 
+  @keyframes 动画的名义{
+     开始帧0% = from 
+     50% , 80% ....
+     结束帧100%  = to
+
+  } */
+
+    @keyframes boxAnimation {
+      0% {
+        transform: translate(0, 0)  rotate(0deg);
+      }
+
+      50% {
+        transform: translate(500px, 0);
+      }
+
+      100% {
+        transform: translate(1000px, 0) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+
+</body>
+
+</html>

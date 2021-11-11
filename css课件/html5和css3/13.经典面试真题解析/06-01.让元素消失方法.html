@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 让元素怒消失在视野中，发挥你的想象力
+        1.文字消失: logo 
+        + text-indent:-9999em/px
+        + font-size:0
+        2.色块消失
+        + display: none;  (不占位置大小)
+        + visibility: hidden; (占位置大小)
+        + opacity: 0;
+        + transform: translateX(-9999px) + scale(0) + rotate(deg)
+        + position  +  方位 left:-9999px;
+        + overflow:hidden  +  width:0
+        + overflow:hidden  +  height:0
+        .....
+        */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="logo">
+        <a href="#">淘宝网</a>
+    </h1>
+
+    <div class="box"></div>
+    <div class="box1"></div>
+
+
+
+</body>
+
+</html>
