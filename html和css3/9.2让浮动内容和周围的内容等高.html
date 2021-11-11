@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>让浮动内容和周围的内容等高</title>
+    <style>
+        .box {
+            background-color: rgb(224, 206, 247);
+            border: 5px solid rebeccapurple;
+            position: fixed;
+            /* position: absolute; */
+            /* display: table-caption; */
+            /* float: left; */
+            /* overflow: hidden; */
+        }
+        
+        .float {
+            width: 200px;
+            height: 150px;
+            background-color: white;
+            border: 1px solid black;
+            padding: 10px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="float">I am a floated box!</div>
+        <p>I am content inside the container.</p>
+    </div>
+</body>
+
+</html>

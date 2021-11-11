@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS使用小技巧-完美的带小箭头的聊天框特效</title>
+    <style>
+        .chat-box {
+            margin: 50px auto;
+            position: relative;
+            max-width: 200px;
+            padding: 10px;
+            color: #faae43;
+            background: #fff9ed;
+            border: 1px solid #ffc16b;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(250, 174, 67, 0.8);
+        }
+        /* 方法一 */
+        /* .chat-box::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 20px;
+            left: -6px;
+            width: 10px;
+            height: 10px;
+            background: #fff9ed;
+            border-width: 1px 0 0 1px;
+            border-color: #ffc16b;
+            border-style: solid;
+            transform: rotate(-45deg);
+            box-shadow: 0 2px 6px rgba(250, 174, 67, 0.8);
+        } */
+        /* 方法二 */
+        
+        .chat-box::before {
+            position: absolute;
+            left: -8px;
+            top: 20px;
+            content: '';
+            /* display: block; */
+            /* background: #fff9ef; */
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 8px 8px 8px 0;
+            border-color: transparent #fff9ef transparent transparent;
+        }
+        
+        .chat-box::after {
+            position: absolute;
+            left: -7px;
+            top: 20px;
+            content: '';
+            /* display: block; */
+            width: 10px;
+            height: 10px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: transparent;
+            border-top-color: inherit;
+            border-left-color: inherit;
+            border-top-left-radius: 3px;
+            transform: rotate(-45deg);
+            filter: drop-shadow(0 2px 6px rgba(250, 174, 67, 0.8));
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat-box"> 庭院深深，不知有多深？杨柳依依，飞扬起片片烟雾，一重重帘幕不知有多少层。</div>
+</body>
+
+</html>

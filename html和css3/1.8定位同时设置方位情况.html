@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位同时设置方位情况</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        header {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            background-color: greenyellow;
+        }
+        
+        main {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50px;
+            bottom: 50px;
+            background: hotpink;
+            height: 5000px;
+        }
+        
+        footer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 50px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header></header>
+    <main>
+        <div class="left"></div>
+        <div class="right"></div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

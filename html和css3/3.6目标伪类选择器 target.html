@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>目标伪类选择器 target</title>
+    <style>
+        .menuSection {
+            display: none;
+        }
+        
+         :target {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- :target选择器称为目标选择器，用来匹配文档(页面)的url的某个标志符的目标元素  -->
+    <h2><a href="#brand">Brand</a></h2>
+    <div class="menuSection" id="brand">
+        content for Brand
+    </div>
+</body>
+
+</html>

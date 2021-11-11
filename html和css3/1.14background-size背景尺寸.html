@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-size背景尺寸</title>
+    <style>
+        div {
+            float: left;
+        }
+        
+        .box1 {
+            width: 50px;
+            height: 50px;
+            background: #000 url(images/icon-wechat.png) no-repeat;
+            background-size: cover;
+        }
+        /* 背景属性：宽度  高度  cover  contain  px %   
+    background-size:
+    cover：   宽高+ 高度同时等比例  会出现超出裁剪的情况
+    contain:  宽高 或者 高度等比例  会出现留白的情况
+
+
+    */
+    </style>
+</head>
+
+<body>
+    <!-- <img src="images/firefox-logo.svg" alt=""> -->
+
+    <div class="box1"></div>
+
+    <div class="box2"></div>
+
+    <div class="box3"></div>
+
+    <div class="box4"></div>
+    <br>
+
+    <div class="box5"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>外边距折叠</title>
+    <style>
+        p {
+            color: #f55;
+            background: #fcc;
+            width: 200px;
+            line-height: 100px;
+            text-align: center;
+        }
+        
+        .p1 {
+            margin-bottom: 110px;
+        }
+        
+        .p2 {
+            margin-top: 100px;
+        }
+        
+        .box {
+            /* float: left; */
+            /* position: fixed; */
+            /* display: inline-block; */
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="p1">zhufeng</p>
+    <div class="box">
+        <p class="p2">zhufeng</p>
+    </div>
+</body>
+
+</html>

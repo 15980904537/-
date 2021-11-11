@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radial-gradient径向渐变</title>
+    <style>
+        div {
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+        }
+        
+        .box1 {
+            background: radial-gradient(#e66465, #9198e5);
+        }
+        
+        .box2 {
+            background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+        }
+        
+        .box3 {
+            background: radial-gradient(circle at 100%, #333, #333 50%, #eee 75%, #333 75%);
+        }
+        
+        .box4 {
+            background: radial-gradient(ellipse at top, #e66465, transparent), radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 颜色A - B 渐变 -->
+    <div class="box1"></div>
+
+    <!-- 颜色A - B 渐变(渐变的边缘形状与容器距离渐变中心点最近的一边相切) -->
+    <div class="box2"></div>
+
+    <!-- 颜色A - B 渐变(圆形（渐变的形状是一个半径不变的正圆）) -->
+    <div class="box3"></div>
+
+    <!-- 颜色A - B 渐变(椭圆形（轴对称椭圆）) -->
+    <div class="box4"></div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>浮动模型</title>
+    <style>
+        .main {
+            /* position: fixed; */
+            /* display: inline-block; */
+            /* overflow: hidden; */
+            /* height: 300px; */
+        }
+        
+        .main::after {
+            content: "";
+            display: block;
+            clear: both;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+            font-size: 0;
+        }
+        
+        img {
+            width: 200px;
+            float: left;
+        }
+        
+        .txt {
+            width: 300px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img src="https://inews.gtimg.com/newsapp_ls/0/12673365175_640330/0" alt="" />
+        <div class="txt">
+            <a>超模范！小酒窝穿廓形西装条纹衫时尚感强 眼神清澈又萌又帅超模范！</a>
+        </div>
+        <div style="clear: both"></div>
+    </div>
+
+    <ul>
+        <li>超模范！小酒窝穿廓形西装条纹衫时尚感强</li>
+        <li>超模范！小酒窝穿廓形西装条纹衫时尚感强</li>
+        <li>超模范！小酒窝穿廓形西装条纹衫时尚感强</li>
+        <li>超模范！小酒窝穿廓形西装条纹衫时尚感强</li>
+        <li>超模范！小酒窝穿廓形西装条纹衫时尚感强</li>
+        <li>超模范！小酒窝穿廓形西装条纹衫时尚感强</li>
+        <li>超模范！小酒窝穿廓形西装条纹衫时尚感强</li>
+        <li>超模范！小酒窝穿廓形西装条纹衫时尚感强</li>
+    </ul>
+</body>
+
+</html>

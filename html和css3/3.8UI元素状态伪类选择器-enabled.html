@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI元素状态伪类选择器-enabled</title>
+    <style>
+        div {
+            margin-top: 20px;
+        }
+        
+        input[type='text']:enabled {
+            background: #ccc;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <div>
+            <label for="name">Text Input:</label>
+            <input type="text" name="name" id="name" placeholder="可用输入框" />
+        </div>
+        <div>
+            <label for="name">Text Input:</label>
+            <input type="text" name="name" id="name" placeholder="禁用输入框" disabled="disabled" />
+        </div>
+    </form>
+</body>
+
+</html>

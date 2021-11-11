@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI元素状态伪类选择器-checked</title>
+    <style>
+        form {
+            width: 300px;
+            padding: 20px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+        }
+        
+        .wrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .box {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid orange;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .box input {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+        
+        .box span {
+            position: absolute;
+            top: -5px;
+            /* right: 3px; */
+            font-size: 30px;
+            font-weight: bold;
+            font-family: Arial;
+            -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+            color: orange;
+        }
+        
+        input[type="checkbox"]+span {
+            opacity: 0;
+        }
+        
+        input[type="checkbox"]:checked+span {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <div class="wrapper">
+            <div class="box">
+                <input type="checkbox" checked="checked" id="usename" /><span>√</span>
+            </div>
+            <lable for="usename">我是选中状态</lable>
+        </div>
+
+        <div class="wrapper">
+            <div class="box">
+                <input type="checkbox" id="usepwd" /><span>√</span>
+            </div>
+            <label for="usepwd">我是未选中状态</label>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "17719475",
+      "name": "手柱状图",
+      "font_class": "shouzhuzhuangtu",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    },
+    {
+      "icon_id": "17719476",
+      "name": "个人图表",
+      "font_class": "gerentubiao",
+      "unicode": "e68b",
+      "unicode_decimal": 59019
+    },
+    {
+      "icon_id": "17719477",
+      "name": "盒子",
+      "font_class": "hezi",
+      "unicode": "e68c",
+      "unicode_decimal": 59020
+    },
+    {
+      "icon_id": "17719483",
+      "name": "扇形图2",
+      "font_class": "shanxingtu2",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构性伪类选择器 not</title>
+    <style>
+        form {
+            width: 300px;
+            margin: 50px auto;
+        }
+        
+        div {
+            margin-bottom: 20px;
+        }
+        
+        input:not([type='submit']) {
+            border: 1px solid red;
+            background: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <div>
+            <label for="name">Text Input:</label>
+            <input type="text" name="name" id="name" placeholder="John
+                    Smith" />
+        </div>
+        <div>
+            <label for="name">Password Input:</label>
+            <input type="text" name="name" id="name" placeholder="John
+                    Smith" />
+        </div>
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+</body>
+
+</html>

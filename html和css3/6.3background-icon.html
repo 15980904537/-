@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-icon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* .main {
+            width: 1080px;
+            margin: 0 auto;
+        } */
+        
+        .item {
+            float: left;
+            width: 33.3%;
+            /* display: flex;
+            align-items: center; */
+        }
+        
+        .icon {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        
+        .txt {
+            display: inline-block;
+            text-align: left;
+        }
+        
+        .item:nth-child(1) {
+            text-align: left;
+        }
+        
+        .item:nth-child(2) {
+            text-align: center;
+        }
+        
+        .item:nth-child(3) {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="item">
+            <div class="icon" style="background-image: url(imagescopy/icon-wechat.png);"></div>
+            <div class="txt">
+                <h2>微信小程序</h2>
+                <p>微信扫一扫，直接用车</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="icon" style="background-image:url(imagescopy/icon-credit.png);"></div>
+            <div class="txt">
+                <h2>微信小程序</h2>
+                <p>微信扫一扫，直接用车</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="icon" style="background-image:url(imagescopy/icon-rp.png);"></div>
+            <div class="txt">
+                <h2>微信小程序</h2>
+                <p>微信扫一扫，直接用车</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

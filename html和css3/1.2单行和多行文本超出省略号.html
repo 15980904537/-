@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单行和多行文本超出省略号</title>
+    <style>
+        .text {
+            width: 200px;
+            height: 100px;
+            background: tomato;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* display: inline-block; */
+        }
+        
+        .text1 {
+            width: 200px;
+            /* height: 100px;不能给高度 */
+            background: tomato;
+            /* white-space: nowrap; */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            /* text-overflow: ellipsis; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 单行 -->
+    <p class="text">庭院深深，不知有多深？杨柳依依，飞扬起片片烟雾，一重重帘幕不知有多少层。豪华的车马停在贵族公子寻欢作乐的地方，她登楼向远处望去，却看不见那通向章台的大路。春已至暮，三月的雨伴随着狂风大作，再是重门将黄昏景色掩闭，也无法留住春意。泪眼汪汪问落花可知道我的心意，落花默默不语，纷乱的，零零落落一点一点飞到秋千外。</p>
+    <!-- 多行 -->
+    <p class="text1">
+        庭院深深，不知有多深？杨柳依依，飞扬起片片烟雾，一重重帘幕不知有多少层。豪华的车马停在贵族公子寻欢作乐的地方，她登楼向远处望去，却看不见那通向章台的大路。春已至暮，三月的雨伴随着狂风大作，再是重门将黄昏景色掩闭，也无法留住春意。泪眼汪汪问落花可知道我的心意，落花默默不语，纷乱的，零零落落一点一点飞到秋千外。
+    </p>
+
+</body>
+
+</html>

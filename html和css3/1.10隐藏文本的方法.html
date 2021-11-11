@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐藏文本的方法</title>
+    <style>
+        .logo {
+            width: 190px;
+            height: 80px;
+            float: left;
+            margin-top: 8px
+        }
+        
+        .logo h1 .logo-bd {
+            display: block;
+            margin-left: 22px;
+            padding-top: 58px;
+            width: 142px;
+            overflow: hidden;
+            font-size: 0;
+            /* text-indent: -9999px; */
+            background: url(http://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png) 0 0 no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <h1>
+            <a href="#" role="img" class="logo-bd clearfix">淘宝网</a>
+        </h1>
+    </div>
+</body>
+
+</html>
